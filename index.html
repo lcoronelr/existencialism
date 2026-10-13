@@ -221,34 +221,12 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;backgroun
 .zone-chip:hover{border-color:var(--brass)}
 .zone-chip i{font-style:normal;width:19px;height:19px;border-radius:50%;background:var(--brass);color:#16241D;font:700 .66rem/19px var(--sans);text-align:center}
 .zone-chip[aria-pressed="true"]{border-color:var(--brass);background:var(--brass-soft)}
-/* 2D fallback (shown only when 3D can't run) */
-.plan2d{display:grid;grid-template-columns:1.55fr 1fr;gap:clamp(28px,4vw,48px);align-items:start}
-.plan-figure{background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:18px;min-width:0}
-.plan-figure .plan-scroll{overflow-x:auto}
-.plan-figure svg{width:100%;min-width:560px;height:auto;display:block}
-.plan-meta{display:flex;justify-content:space-between;gap:12px;font:400 .7rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding:2px 4px 12px}
-.fp-wall{fill:none;stroke:var(--ink);stroke-width:7}
-.fp-window{stroke:var(--paper);stroke-width:7}
-.fp-window2{stroke:var(--zone-stroke);stroke-width:1.5}
-.fp-floor{fill:var(--bg)}
-.fp-furn{fill:var(--paper);stroke:var(--zone-stroke);stroke-width:1.4}
-.fp-chair{fill:var(--zone-stroke)}
-.fp-text{font:600 12px var(--sans);fill:var(--ink);letter-spacing:.02em;pointer-events:none}
-.fp-sub{font:400 9.5px var(--mono);fill:var(--muted);letter-spacing:.08em;text-transform:uppercase;pointer-events:none}
-.fp-dim{font:400 9px var(--mono);fill:var(--muted)}
-.zone{cursor:pointer;outline:none}
-.zone .zbg{stroke:var(--zone-stroke);stroke-width:1.2;stroke-dasharray:4 4;transition:fill .25s,stroke .25s}
-.zone.za .zbg{fill:var(--zone-a)}.zone.zb .zbg{fill:var(--zone-b)}.zone.zc .zbg{fill:var(--zone-c)}
-.zone:hover .zbg,.zone:focus-visible .zbg,.zone.on .zbg{stroke:var(--brass);stroke-width:2.4;stroke-dasharray:none}
-.zone .pin{fill:var(--brass)}
-.zone .pin-t{font:700 10px var(--sans);fill:#16241D;pointer-events:none}
 .zone-card{background:var(--forest);color:#F2EDE0;border-radius:6px;padding:28px;display:grid;gap:10px;align-content:start}
 .zone-card .k{font:500 .7rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#D3B678}
 .zone-card h4{font-size:1.9rem}
 .zone-card p{color:#D6DDD3;font-size:.97rem}
 .zone-card .why{border-top:1px solid rgba(242,237,224,.2);padding-top:12px;font-size:.9rem;color:#E9DEC2}
 .zone-card .why b{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;display:block;color:#D3B678;margin-bottom:4px;font-weight:500}
-@media (max-width:960px){.plan2d{grid-template-columns:1fr}}
 
 /* ---------- academics ---------- */
 .week{margin-bottom:clamp(56px,7vw,84px)}
@@ -461,6 +439,7 @@ footer a{text-decoration:none}
 footer a:hover{color:var(--on-band)}
 .foot-brand{display:grid;gap:14px;max-width:40ch}
 .foot-brand .brand-name{color:var(--on-band)}
+.foot-made{margin:18px 0 0;font:500 .74rem var(--mono);letter-spacing:.08em;color:var(--brass)}
 .foot-legal{margin-top:48px;padding-top:20px;border-top:1px solid rgba(242,237,224,.14);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.78rem}
 @media (max-width:760px){.foot-grid{grid-template-columns:1fr}}
 
@@ -479,7 +458,7 @@ footer a:hover{color:var(--on-band)}
   </defs>
 </svg>
 
-<div class="topbar"><div class="wrap"><span>Independent Upper School · Grades 9–12</span><span>Admissions Open · Class of 2030</span></div></div>
+<div class="topbar"><div class="wrap"><span>Outdoor Environmental Science School · Grades 9–12</span><span>Admissions Open · Class of 2030</span></div></div>
 
 <header class="nav" id="top">
   <div class="wrap">
@@ -502,11 +481,11 @@ footer a:hover{color:var(--on-band)}
 <main>
 <!-- ================= HOME ================= -->
 <section class="hero" id="home" data-presenter="1" data-title="Welcome">
-  <img class="hero-img" src="images/hero.jpg" alt="The Freedom Academy's main hall seen across the south lawn">
+  <img class="hero-img" src="images/hero-valley.jpg" alt="A mountain meadow and pine forest below a granite cliff">
   <div class="wrap">
-    <p class="eyebrow">An existentialist school · Est. 2026</p>
+    <p class="eyebrow">An existentialist school in the wild · Est. 2026</p>
     <h1><span>Your Education.</span><span>Your Choices.</span><span><em>Your Future.</em></span></h1>
-    <p class="lede">The Freedom Academy is an upper school built on one belief: no one is born with a finished identity. Students here discover who they are by choosing what they study, how they learn, and what they stand for, and they take ownership of every one of those choices.</p>
+    <p class="lede">The Freedom Academy is an outdoor upper school for environmental science, built on one belief: no one is born with a finished identity. Out here, on trails, rivers and farmland, students discover who they are by choosing what they study, how they learn and what they stand for, and they own every one of those choices.</p>
     <div class="hero-ctas">
       <a class="btn btn-brass" href="#path">Create Your Own Path <span aria-hidden="true">→</span></a>
       <a class="btn btn-ghost" href="#mission">Explore the Academy</a>
@@ -514,9 +493,9 @@ footer a:hover{color:var(--on-band)}
   </div>
   <div class="facts"><div class="wrap">
     <div class="fact"><b>80%</b><span>of every student's week is chosen by the student</span></div>
+    <div class="fact"><b>300</b><span>acres of forest, river and meadow as the classroom</span></div>
     <div class="fact"><b>1 : 12</b><span>one mentor for every twelve students</span></div>
     <div class="fact"><b>0</b><span>bells, letter grades or class rankings</span></div>
-    <div class="fact"><b>3</b><span>school-wide principles. Students write every other rule.</span></div>
   </div></div>
 </section>
 
@@ -525,12 +504,12 @@ footer a:hover{color:var(--on-band)}
   <div class="wrap mission-grid">
     <div class="reveal" style="display:grid;gap:26px">
       <p class="eyebrow">Mission</p>
-      <p class="mission-statement">We give every student the <em>freedom</em> to explore their interests, the <em>courage</em> to shape their own identity, and the <em>responsibility</em> to own the choices that make up their education.</p>
+      <p class="mission-statement">We give every student the <em>freedom</em> to explore the natural world and their place in it, the <em>courage</em> to shape their own identity, and the <em>responsibility</em> to own their choices, for themselves and for the land they share.</p>
     </div>
     <div class="goals reveal">
-      <div class="goal"><span class="goal-num">I</span><div><h3>Encourage independent thinking</h3><p>Students question ideas instead of memorizing answers. Every course includes Socratic seminars where students argue, test and defend their own conclusions.</p><span class="measure">Measured by: a defended position paper each term</span></div></div>
-      <div class="goal"><span class="goal-num">II</span><div><h3>Promote personal growth &amp; creativity</h3><p>Each student designs a year-long Passion Project and keeps a reflective journal tracking how their thinking and identity change.</p><span class="measure">Measured by: an annual portfolio &amp; Authorship Showcase</span></div></div>
-      <div class="goal"><span class="goal-num">III</span><div><h3>Develop responsibility through choice</h3><p>Students write their own learning plan, the Path Contract, and review it with a mentor. Freedom comes with accountability for outcomes.</p><span class="measure">Measured by: Path Contract reviews every six weeks</span></div></div>
+      <div class="goal"><span class="goal-num">I</span><div><h3>Encourage independent thinking</h3><p>Students question ideas instead of memorizing answers. Fire Circle seminars and their own field research ask them to test and defend their own conclusions.</p><span class="measure">Measured by: a defended field study each term</span></div></div>
+      <div class="goal"><span class="goal-num">II</span><div><h3>Promote personal growth &amp; creativity</h3><p>Each student designs a year-long Passion Project in the field and keeps a field journal that tracks how their thinking and identity change.</p><span class="measure">Measured by: an annual portfolio &amp; Authorship Showcase</span></div></div>
+      <div class="goal"><span class="goal-num">III</span><div><h3>Develop responsibility through choice</h3><p>Students write their own Path Contract, lead expeditions and care for the land they use. Freedom comes with accountability for what follows.</p><span class="measure">Measured by: Path Contract reviews every six weeks</span></div></div>
     </div>
   </div>
 </section>
@@ -540,9 +519,9 @@ footer a:hover{color:var(--on-band)}
   <div class="wrap">
     <div class="phil-intro">
       <div class="reveal" style="display:grid;gap:22px">
-        <p class="eyebrow">Our Philosophy · Existentialism</p>
+        <p class="eyebrow">Our Philosophy · Existentialism in Nature</p>
         <h2>We don't decide who students become. <em style="color:#E2C98F">They do.</em></h2>
-        <p class="lede">Existentialism holds that people are not born with a fixed purpose. We create who we are through the choices we make, and we are responsible for them. A school built on this idea cannot hand every student the same script. It has to give them room to choose and the support to choose well.</p>
+        <p class="lede">Existentialism holds that people are not born with a fixed purpose. We create who we are through our choices, and we are responsible for them. Nature makes this real: on a river or a mountain trail, every decision has consequences you can see, and no one can make it for you.</p>
       </div>
       <blockquote class="quote reveal" style="margin:0">
         <span class="big">“Existence precedes essence.”</span>
@@ -550,13 +529,12 @@ footer a:hover{color:var(--on-band)}
       </blockquote>
     </div>
 
-
     <div class="p2p reveal" style="border-top:0">
       <div class="p2p-row p2p-head"><span>Principle</span><span>What existentialism says</span><span>What we do about it</span></div>
-      <div class="p2p-row"><h4>Freedom</h4><div><span class="lbl">The idea</span><p>Human beings are free to define themselves, and no outside authority should define them in advance.</p></div><div><span class="lbl">In practice</span><p>There are no required courses. Students choose 80% of their week: nature electives, a self-designed Passion Project, and how they demonstrate learning.</p></div></div>
-      <div class="p2p-row"><h4>Responsibility</h4><div><span class="lbl">The idea</span><p>Freedom is not an excuse. We answer for what our choices create.</p></div><div><span class="lbl">In practice</span><p>Every student signs a Path Contract, sets their own deadlines and reflects on results with a mentor. When choices fail, they revise them instead of being punished.</p></div></div>
+      <div class="p2p-row"><h4>Freedom</h4><div><span class="lbl">The idea</span><p>Human beings are free to define themselves, and no outside authority should define them in advance.</p></div><div><span class="lbl">In practice</span><p>No required courses. Students choose 80% of their week: nature electives, a self-designed Passion Project, and where and how they learn.</p></div></div>
+      <div class="p2p-row"><h4>Responsibility</h4><div><span class="lbl">The idea</span><p>Freedom is not an excuse. We answer for what our choices create.</p></div><div><span class="lbl">In practice</span><p>Every student signs a Path Contract, leads expeditions and cares for the campus land. When a choice fails, they revise it instead of being punished.</p></div></div>
       <div class="p2p-row"><h4>Authenticity</h4><div><span class="lbl">The idea</span><p>Living by values you have examined, rather than by what others expect of you.</p></div><div><span class="lbl">In practice</span><p>No class rank or letter grades to chase. Students receive narrative feedback and are assessed against their own goals.</p></div></div>
-      <div class="p2p-row"><h4>Meaning</h4><div><span class="lbl">The idea</span><p>Life has no pre-packaged meaning. Each person must create it.</p></div><div><span class="lbl">In practice</span><p>Daily reflection on the trail, open-air seminars on the big questions, and time in nature at the heart of every week.</p></div></div>
+      <div class="p2p-row"><h4>Meaning</h4><div><span class="lbl">The idea</span><p>Life has no pre-packaged meaning. Each person must create it.</p></div><div><span class="lbl">In practice</span><p>Sunrise reflection on the trail, Fire Circle seminars on the big questions, and The Solo: 24 hours alone in nature with only a journal.</p></div></div>
     </div>
   </div>
 </section>
@@ -566,34 +544,34 @@ footer a:hover{color:var(--on-band)}
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">Our Campus · Physical Environment</p>
-      <h2>A campus designed for choosing, not just for sitting.</h2>
-      <p class="lede">Every space answers the same question: where does <em>this</em> student learn best right now? Students move freely between quiet rooms, loud studios and open outdoor space. There are no bells and no hall passes.</p>
+      <h2>A campus with no walls.</h2>
+      <p class="lede">Three hundred acres of forest, river and meadow. Classes meet outdoors whenever the weather allows, with a timber pavilion and a log basecamp for storms and winter. There are no bells and no hall passes: students choose where they learn best.</p>
     </div>
     <div class="mosaic reveal">
-      <figure class="tile t1"><img src="images/hall.jpg" alt="A long, light-filled corridor lined with glass-walled studios" loading="lazy"><figcaption><b>The Commons &amp; Glass Studios</b><span>Glass walls keep learning visible and open. Any student can see, and join, what is happening in any room.</span></figcaption></figure>
-      <figure class="tile t2"><img src="images/library.jpg" alt="A student walking alone between tall library shelves" loading="lazy"><figcaption><b>The Solitude Library</b><span>Silent stacks and reading nooks for independent thinking.</span></figcaption></figure>
-      <figure class="tile t3"><img src="images/studio.jpg" alt="An open-plan workspace with long tables and students working together" loading="lazy"><figcaption><b>Innovation Studio</b><span>Open workspace for ventures, coding and team projects.</span></figcaption></figure>
-      <figure class="tile t4"><img src="images/seminar.jpg" alt="Students in lively discussion beside a bookcase" loading="lazy"><figcaption><b>Socratic Rooms</b><span>Circular seating, no lectern.</span></figcaption></figure>
-      <figure class="tile t5"><img src="images/maker.jpg" alt="A student drafting technical drawings on a maker bench" loading="lazy"><figcaption><b>Maker Workshop</b><span>Tools, materials and 3D printers.</span></figcaption></figure>
-      <figure class="tile t6"><img src="images/horizon.jpg" alt="Four students arm in arm watching the sunrise over hills" loading="lazy"><figcaption><b>Horizon Gardens</b><span>Outdoor classrooms and reflection trails.</span></figcaption></figure>
+      <figure class="tile t1"><img src="images/basecamp.jpg" alt="A log cabin among tall pine trees" loading="lazy"><figcaption><b>Basecamp Lodge</b><span>Log cabins for winter days, shared meals, gear and Town Meeting when it storms.</span></figcaption></figure>
+      <figure class="tile t2"><img src="images/river.jpg" alt="A clear mountain stream running over smooth rocks" loading="lazy"><figcaption><b>The River Field Lab</b><span>Water testing, stream restoration and life in moving water.</span></figcaption></figure>
+      <figure class="tile t3"><img src="images/fire-circle.jpg" alt="Students gathered around a campfire among pine trees at dusk" loading="lazy"><figcaption><b>The Fire Circle</b><span>Log benches around a fire pit for seminars and debate.</span></figcaption></figure>
+      <figure class="tile t4"><img src="images/garden.jpg" alt="Hands picking strawberries into baskets in a garden bed" loading="lazy"><figcaption><b>The Farm &amp; Greenhouse</b><span>Students grow much of the food the school eats.</span></figcaption></figure>
+      <figure class="tile t5"><img src="images/solitude.jpg" alt="A person sitting alone at the end of a dock on a mountain lake" loading="lazy"><figcaption><b>The Solitude Dock</b><span>A quiet place to think, alone.</span></figcaption></figure>
+      <figure class="tile t6"><img src="images/expedition.jpg" alt="A hiker with a large pack walking into a green mountain valley" loading="lazy"><figcaption><b>Expedition Trails</b><span>Routes into the mountains for multi-day trips.</span></figcaption></figure>
     </div>
     <div class="compare">
       <div class="compare-head reveal">
         <p class="eyebrow">Then vs. Now</p>
-        <h3 style="font-size:clamp(2rem,3.6vw,2.8rem)">What changes when a school takes freedom seriously.</h3>
+        <h3 style="font-size:clamp(2rem,3.6vw,2.8rem)">What changes when the classroom has no walls.</h3>
       </div>
       <div class="vs reveal" id="vs">
         <div class="vs-layer vs-now">
           <img src="images/outdoor-circle.jpg" alt="Students sitting in a circle outdoors around a fire pit, deep in conversation" loading="lazy">
           <ul class="vs-list" aria-label="The Freedom Academy">
             <li class="vs-side-h"><small>Now</small><strong>The Freedom Academy</strong></li>
-            <li><b>Room</b><span>A studio with seven zones and no front of the room</span></li>
-            <li><b>Furniture</b><span>On wheels, so students reshape the room for their work</span></li>
-            <li><b>Time</b><span>No bells and open doors. Students manage their own schedule.</span></li>
-            <li><b>Teacher</b><span>Mentors move between zones and work in open alcoves</span></li>
-            <li><b>Walls</b><span>Work that students choose to display</span></li>
-            <li><b>Sound</b><span>A silent wing and a collaborative wing</span></li>
-            <li><b>Setting</b><span>Gardens, a reflection trail and outdoor seminar circles</span></li>
+            <li><b>Classroom</b><span>Forest, river and meadow. Students choose where to learn.</span></li>
+            <li><b>Materials</b><span>Field journals, water-testing kits and trail maps</span></li>
+            <li><b>Time</b><span>The day follows daylight and the seasons, not bells</span></li>
+            <li><b>Teacher</b><span>Mentors guide in the field, then step back</span></li>
+            <li><b>Evidence</b><span>Restored streams, harvests and field journals</span></li>
+            <li><b>Quiet</b><span>The reflection trail or the Fire Circle. Students choose.</span></li>
+            <li><b>Risk</b><span>Real choices with real consequences, guided by mentors</span></li>
             <li><b>Grades</b><span>Narrative feedback and a growth portfolio</span></li>
             <li><b>Rules</b><span>Written by students at the weekly Town Meeting</span></li>
           </ul>
@@ -602,13 +580,13 @@ footer a:hover{color:var(--on-band)}
           <img src="images/traditional.jpg" alt="A traditional classroom with rows of desks facing a chalkboard" loading="lazy">
           <ul class="vs-list" aria-label="The traditional classroom">
             <li class="vs-side-h"><small>Then</small><strong>The traditional classroom</strong></li>
-            <li><b>Room</b><span>Rows of desks facing the teacher</span></li>
-            <li><b>Furniture</b><span>Bolted down, same layout all year</span></li>
+            <li><b>Classroom</b><span>Four walls and rows of desks facing the teacher</span></li>
+            <li><b>Materials</b><span>Textbooks and worksheets</span></li>
             <li><b>Time</b><span>Bells decide when everyone moves</span></li>
-            <li><b>Teacher</b><span>Lectures from the front, office behind a closed door</span></li>
-            <li><b>Walls</b><span>Trophies, honor rolls and rankings</span></li>
-            <li><b>Sound</b><span>One rule for everyone: stay quiet</span></li>
-            <li><b>Setting</b><span>Learning stays inside four walls</span></li>
+            <li><b>Teacher</b><span>Lectures from the front of the room</span></li>
+            <li><b>Evidence</b><span>Tests, trophies and honor rolls</span></li>
+            <li><b>Quiet</b><span>One rule for everyone: stay quiet</span></li>
+            <li><b>Risk</b><span>Every choice made for you in advance</span></li>
             <li><b>Grades</b><span>Letter grades and class rank</span></li>
             <li><b>Rules</b><span>Handed down by adults</span></li>
           </ul>
@@ -618,104 +596,24 @@ footer a:hover{color:var(--on-band)}
       </div>
     </div>
 
-    <!-- floor plan -->
+    <!-- outdoor classroom model -->
     <div class="plan" id="classroom">
       <div class="plan-head reveal">
         <div>
           <p class="eyebrow">Classroom Layout · Fig. 1</p>
-          <h3 style="font-size:clamp(1.9rem,3.4vw,2.7rem)">The Studio Classroom has no front of the room.</h3>
+          <h3 style="font-size:clamp(1.9rem,3.4vw,2.7rem)">The classroom has no walls.</h3>
         </div>
       </div>
       <div class="room3d" id="room3d">
-        <canvas id="roomCanvas" tabindex="0" aria-label="Interactive 3D model of the studio classroom. Use the zone buttons below to visit each zone."></canvas>
-        <div class="r3-loading" id="r3Loading">Building the classroom…</div>
+        <canvas id="roomCanvas" tabindex="0" aria-label="Interactive 3D model of the outdoor classroom. Use the zone buttons below to visit each zone."></canvas>
+        <div class="r3-loading" id="r3Loading">Building the outdoor classroom…</div>
         <div class="r3-hint">Drag to rotate · Scroll to zoom · Click a pin</div>
         <div class="r3-tip" id="r3Tip" hidden></div>
-        <button class="btn r3-overview" id="r3Overview" type="button" hidden>← Whole room</button>
+        <button class="btn r3-overview" id="r3Overview" type="button" hidden>← Whole campus</button>
         <div class="r3-card" id="r3Card" hidden aria-live="polite"></div>
       </div>
       <div class="zone-list" id="zoneList"></div>
-      <div class="plan2d" id="planFallback" hidden>
-      <div class="plan-figure">
-        <div class="plan-meta"><span>Fig. 1 · Typical Studio Classroom</span><span>~ 8 × 12 m · 24 students</span></div>
-        <div class="plan-scroll">
-        <svg viewBox="0 0 800 560" role="img" aria-labelledby="fpTitle">
-          <title id="fpTitle">Floor plan of a Freedom Academy studio classroom with seven learning zones</title>
-          <rect class="fp-floor" x="24" y="24" width="752" height="500"/>
-          <!-- zones -->
-          <g class="zone za" data-zone="seminar" tabindex="0" role="button" aria-label="Seminar Circle">
-            <rect class="zbg" x="110" y="190" width="250" height="230" rx="10"/>
-            <circle class="fp-furn" cx="235" cy="305" r="62"/>
-            <g class="fp-chair">
-              <circle cx="235" cy="226" r="9"/><circle cx="235" cy="384" r="9"/><circle cx="156" cy="305" r="9"/><circle cx="314" cy="305" r="9"/>
-              <circle cx="179" cy="249" r="9"/><circle cx="291" cy="249" r="9"/><circle cx="179" cy="361" r="9"/><circle cx="291" cy="361" r="9"/>
-              <circle cx="205" cy="232" r="8"/><circle cx="265" cy="378" r="8"/>
-            </g>
-            <text class="fp-text" x="235" y="301" text-anchor="middle">Seminar</text><text class="fp-text" x="235" y="317" text-anchor="middle">Circle</text>
-            <circle class="pin" cx="130" cy="210" r="11"/><text class="pin-t" x="130" y="214" text-anchor="middle">1</text>
-          </g>
-          <g class="zone zb" data-zone="pods" tabindex="0" role="button" aria-label="Collaboration Pods">
-            <rect class="zbg" x="400" y="110" width="250" height="250" rx="10"/>
-            <rect class="fp-furn" x="440" y="150" width="110" height="60" rx="8"/>
-            <g class="fp-chair"><circle cx="465" cy="138" r="8"/><circle cx="525" cy="138" r="8"/><circle cx="465" cy="222" r="8"/><circle cx="525" cy="222" r="8"/></g>
-            <rect class="fp-furn" x="500" y="262" width="110" height="60" rx="8"/>
-            <g class="fp-chair"><circle cx="525" cy="250" r="8"/><circle cx="585" cy="250" r="8"/><circle cx="525" cy="334" r="8"/><circle cx="585" cy="334" r="8"/></g>
-            <rect class="fp-furn" x="585" y="150" width="10" height="80" rx="2"/>
-            <text class="fp-text" x="495" y="184" text-anchor="middle">Pod A</text><text class="fp-text" x="555" y="296" text-anchor="middle">Pod B</text>
-            <text class="fp-sub" x="452" y="270" text-anchor="middle">mobile</text><text class="fp-sub" x="452" y="282" text-anchor="middle">whiteboard</text>
-            <circle class="pin" cx="420" cy="130" r="11"/><text class="pin-t" x="420" y="134" text-anchor="middle">2</text>
-          </g>
-          <g class="zone zc" data-zone="nooks" tabindex="0" role="button" aria-label="Solitude Nooks">
-            <rect class="zbg" x="672" y="60" width="96" height="300" rx="8"/>
-            <rect class="fp-furn" x="690" y="74" width="68" height="80" rx="6"/><rect class="fp-furn" x="690" y="168" width="68" height="80" rx="6"/><rect class="fp-furn" x="690" y="262" width="68" height="80" rx="6"/>
-            <g class="fp-chair"><circle cx="724" cy="122" r="8"/><circle cx="724" cy="216" r="8"/><circle cx="724" cy="310" r="8"/></g>
-            <text class="fp-sub" x="724" y="98" text-anchor="middle">nook</text><text class="fp-sub" x="724" y="192" text-anchor="middle">nook</text><text class="fp-sub" x="724" y="286" text-anchor="middle">nook</text>
-            <circle class="pin" cx="686" cy="372" r="11"/><text class="pin-t" x="686" y="376" text-anchor="middle">3</text>
-          </g>
-          <g class="zone zb" data-zone="making" tabindex="0" role="button" aria-label="Making Bench">
-            <rect class="zbg" x="400" y="400" width="368" height="112" rx="8"/>
-            <rect class="fp-furn" x="420" y="460" width="330" height="40" rx="4"/>
-            <g class="fp-chair"><circle cx="460" cy="446" r="8"/><circle cx="520" cy="446" r="8"/><circle cx="580" cy="446" r="8"/><circle cx="640" cy="446" r="8"/><circle cx="700" cy="446" r="8"/></g>
-            <text class="fp-text" x="585" y="485" text-anchor="middle">Making Bench &amp; Materials</text>
-            <circle class="pin" cx="420" cy="420" r="11"/><text class="pin-t" x="420" y="424" text-anchor="middle">4</text>
-          </g>
-          <g class="zone zc" data-zone="lounge" tabindex="0" role="button" aria-label="Reading Lounge">
-            <rect class="zbg" x="60" y="40" width="300" height="130" rx="8"/>
-            <rect class="fp-furn" x="74" y="48" width="200" height="18" rx="2"/>
-            <ellipse class="fp-furn" cx="160" cy="118" rx="62" ry="34"/>
-            <g class="fp-chair"><circle cx="95" cy="118" r="13"/><circle cx="226" cy="118" r="13"/><circle cx="160" cy="146" r="11"/></g>
-            <rect class="fp-furn" x="290" y="80" width="54" height="74" rx="10"/>
-            <text class="fp-sub" x="174" y="61" text-anchor="middle">bookshelf</text>
-            <text class="fp-text" x="160" y="122" text-anchor="middle">Reading rug</text>
-            <circle class="pin" cx="340" cy="58" r="11"/><text class="pin-t" x="340" y="62" text-anchor="middle">5</text>
-          </g>
-          <g class="zone za" data-zone="wall" tabindex="0" role="button" aria-label="Reflection Wall">
-            <rect class="zbg" x="30" y="190" width="58" height="300" rx="6"/>
-            <rect x="30" y="200" width="10" height="280" fill="var(--brass)"/>
-            <text class="fp-text" x="66" y="340" text-anchor="middle" transform="rotate(-90 66 340)">Reflection Wall</text>
-            <circle class="pin" cx="62" cy="208" r="11"/><text class="pin-t" x="62" y="212" text-anchor="middle">6</text>
-          </g>
-          <g class="zone zc" data-zone="mentor" tabindex="0" role="button" aria-label="Mentor's Corner">
-            <rect class="zbg" x="250" y="440" width="120" height="72" rx="6"/>
-            <rect class="fp-furn" x="270" y="470" width="62" height="32" rx="3"/>
-            <g class="fp-chair"><circle cx="301" cy="459" r="7"/><circle cx="348" cy="486" r="7"/></g>
-            <text class="fp-sub" x="301" y="490" text-anchor="middle">desk</text>
-            <circle class="pin" cx="268" cy="455" r="11"/><text class="pin-t" x="268" y="459" text-anchor="middle">7</text>
-          </g>
-          <!-- walls, windows, door -->
-          <rect class="fp-wall" x="24" y="24" width="752" height="500"/>
-          <line class="fp-window" x1="380" y1="24" x2="760" y2="24"/>
-          <line class="fp-window2" x1="380" y1="21" x2="760" y2="21"/><line class="fp-window2" x1="380" y1="27" x2="760" y2="27"/>
-          <line class="fp-window" x1="776" y1="40" x2="776" y2="370"/>
-          <line class="fp-window2" x1="773" y1="40" x2="773" y2="370"/><line class="fp-window2" x1="779" y1="40" x2="779" y2="370"/>
-          <line x1="130" y1="524" x2="210" y2="524" stroke="var(--bg)" stroke-width="9"/>
-          <path d="M130 524 A80 80 0 0 1 210 444" fill="none" stroke="var(--zone-stroke)" stroke-dasharray="3 3"/><line x1="130" y1="524" x2="130" y2="444" stroke="var(--zone-stroke)" stroke-width="2"/>
-          <text class="fp-sub" x="170" y="544" text-anchor="middle">Entrance · glass door</text>
-          <text class="fp-sub" x="570" y="15" text-anchor="middle">Floor-to-ceiling windows → Horizon Gardens</text>
-          <line x1="645" y1="540" x2="770" y2="540" stroke="var(--muted)"/><text class="fp-dim" x="645" y="552">0</text><text class="fp-dim" x="770" y="552" text-anchor="end">2 m</text>
-        </svg>
-        </div>
-      </div>
+      <div id="planFallback" hidden>
         <div class="zone-card" id="zoneCard" aria-live="polite"></div>
       </div>
     </div>
@@ -726,9 +624,9 @@ footer a:hover{color:var(--on-band)}
 <section class="section" id="academics" data-presenter="2" data-title="Academics" style="border-top:1px solid var(--line)">
   <div class="wrap">
     <div class="section-head reveal">
-      <p class="eyebrow">Academics · Curriculum &amp; Teaching</p>
+      <p class="eyebrow">Academics · Environmental Science &amp; Teaching</p>
       <h2>No required courses. The natural world is the classroom.</h2>
-      <p class="lede">Existentialism holds that no one can tell you in advance what is worth knowing. So there is no required core. Students choose nature-based electives, design their own Passion Project, and share only a few daily rhythms that keep the community together.</p>
+      <p class="lede">Existentialism holds that no one can tell you in advance what is worth knowing. So there is no required core. Students choose environmental-science electives, design their own Passion Project, and share only a few daily rhythms that keep the community together.</p>
     </div>
 
     <div class="week reveal">
@@ -774,30 +672,30 @@ footer a:hover{color:var(--on-band)}
     <div class="methods">
       <div class="section-head reveal" style="margin-bottom:28px">
         <p class="eyebrow">Teaching Methods &amp; Strategies</p>
-        <h3 style="font-size:clamp(2rem,3.6vw,2.8rem)">Mentors guide. Students lead.</h3>
+        <h3 style="font-size:clamp(2rem,3.6vw,2.8rem)">Mentors guide. Students lead. Nature teaches.</h3>
       </div>
       <div class="method-grid reveal">
-        <div class="method"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="4" r="2.5"/><circle cx="28" cy="16" r="2.5"/><circle cx="16" cy="28" r="2.5"/><circle cx="4" cy="16" r="2.5"/></svg><h4>Socratic Seminar</h4><p>Students sit in a circle and answer open questions with evidence and reasoning. The mentor asks questions instead of giving answers.</p></div>
-        <div class="method"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26 L16 6 L26 26 Z"/><path d="M11 18 H21"/></svg><h4>Project-Based Learning</h4><p>Learning happens through real projects with real audiences, chosen and planned by students.</p></div>
-        <div class="method"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="14" cy="14" r="8"/><path d="M20 20 L27 27"/></svg><h4>Independent Inquiry</h4><p>Students pose their own research questions and decide how to investigate them.</p></div>
-        <div class="method"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 5 H24 V27 H8 Z"/><path d="M12 11 H20 M12 16 H20 M12 21 H17"/></svg><h4>Reflective Journaling</h4><p>Daily writing on what was chosen, what happened and what to try next. This is self-assessment in practice.</p></div>
-        <div class="method"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="5" y="5" width="9" height="9"/><rect x="18" y="5" width="9" height="9"/><rect x="5" y="18" width="9" height="9"/><rect x="18" y="18" width="9" height="9"/></svg><h4>Choice Boards</h4><p>Students show mastery in the form they choose: an essay, a podcast, a model, a performance or a debate.</p></div>
-        <div class="method"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 V28 M16 12 L7 7 M16 12 L25 7 M16 20 L8 16 M16 20 L24 16"/></svg><h4>Dilemma Labs</h4><p>Students role-play real ethical dilemmas, make a decision and live with its consequences in the simulation.</p></div>
+        <div class="method"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="10"/><circle cx="16" cy="4" r="2.5"/><circle cx="28" cy="16" r="2.5"/><circle cx="16" cy="28" r="2.5"/><circle cx="4" cy="16" r="2.5"/></svg><h4>Fire Circle Seminar</h4><p>Students sit in a circle outdoors and answer open questions with evidence and reasoning. The mentor asks questions instead of giving answers.</p></div>
+        <div class="method"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="14" cy="14" r="8"/><path d="M20 20 L27 27"/></svg><h4>Field-Based Inquiry</h4><p>Students ask their own questions about the land, such as why a stream is warming, and go outside to find out.</p></div>
+        <div class="method"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M6 26 L16 6 L26 26 Z"/><path d="M11 18 H21"/></svg><h4>Place-Based Projects</h4><p>Real work with real audiences: restoring a riverbank, running the farm stand, mapping a trail for the town.</p></div>
+        <div class="method"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M8 5 H24 V27 H8 Z"/><path d="M12 11 H20 M12 16 H20 M12 21 H17"/></svg><h4>Field Journaling</h4><p>Daily notes on what students observed, what they chose and what happened. This is self-assessment in practice.</p></div>
+        <div class="method"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 26 L12 10 L18 20 L22 14 L29 26 Z"/></svg><h4>Expeditions</h4><p>Multi-day trips that students plan and lead. They make the decisions and live with them, with mentors close by.</p></div>
+        <div class="method"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4 V28 M16 12 L7 7 M16 12 L25 7 M16 20 L8 16 M16 20 L24 16"/></svg><h4>Environmental Dilemma Labs</h4><p>Students role-play real land-use decisions, like a new dam or a logging permit, and defend the choice they make.</p></div>
       </div>
     </div>
 
     <div class="day">
-      <div class="day-photo reveal"><img src="images/journal.jpg" alt="A student writing in a journal beside a laptop and coffee" loading="lazy"></div>
+      <div class="day-photo reveal"><img src="images/tent-view.jpg" alt="The view from inside a tent across a mountain meadow" loading="lazy"></div>
       <div class="reveal">
         <div class="tbl-cap" style="margin-bottom:6px">A day in the life</div>
         <ol class="timeline">
-          <li><time>08:30</time><div><b>Morning Reflection</b><span>Twenty minutes of silent journaling. Students write the day's intention.</span></div></li>
-          <li><time>09:00</time><div><b>Open-Air Seminar</b><span>A discussion circle outdoors on a question students bring.</span></div></li>
-          <li><time>10:30</time><div><b>Open Studio Block <span class="choice">Student choice</span></b><span>Work on electives anywhere on campus, alone or in a group.</span></div></li>
-          <li><time>12:00</time><div><b>Commons Lunch</b><span>Shared tables, open to mentors and students alike.</span></div></li>
-          <li><time>13:00</time><div><b>Elective Course <span class="choice">Student choice</span></b><span>Forest ecology, regenerative farming, plein-air painting, or a student-proposed elective.</span></div></li>
-          <li><time>14:30</time><div><b>Passion Project Lab <span class="choice">Student choice</span></b><span>Self-directed time with mentor check-ins.</span></div></li>
-          <li><time>15:30</time><div><b>Clubs &amp; Mentor Conferences</b><span>Student-run clubs, plus a weekly one-on-one with your mentor.</span></div></li>
+          <li><time>07:30</time><div><b>Sunrise Reflection</b><span>Twenty quiet minutes on the trail. Students write the day's intention in their field journal.</span></div></li>
+          <li><time>08:30</time><div><b>Fire Circle Seminar</b><span>A discussion circle outdoors on a question students bring.</span></div></li>
+          <li><time>10:00</time><div><b>Field Block <span class="choice">Student choice</span></b><span>River lab, garden, forest plots or a solo study spot.</span></div></li>
+          <li><time>12:00</time><div><b>Lunch from the Garden</b><span>Shared tables at the lodge, with food students helped grow.</span></div></li>
+          <li><time>13:00</time><div><b>Elective <span class="choice">Student choice</span></b><span>Forest ecology, regenerative farming, plein-air painting, or a student-proposed elective.</span></div></li>
+          <li><time>14:30</time><div><b>Passion Project <span class="choice">Student choice</span></b><span>Self-directed fieldwork with mentor check-ins.</span></div></li>
+          <li><time>16:00</time><div><b>Stewardship &amp; Clubs</b><span>Everyone helps care for the campus, then clubs and mentor conferences.</span></div></li>
         </ol>
       </div>
     </div>
@@ -811,18 +709,18 @@ footer a:hover{color:var(--on-band)}
       <div class="reveal" style="display:grid;gap:18px">
         <p class="eyebrow">Student Life · Extracurriculars</p>
         <h2>Students don't just join clubs. They found them.</h2>
-        <p class="lede">The school founds only a few activities. Students start everything else. If something is missing, a student can create it, and responsibility for running it belongs to them.</p>
+        <p class="lede">Life here happens outside: on the river, on the rock, around the fire. The school founds only a few activities. Students start everything else, and responsibility for running it belongs to them.</p>
         <div class="club-steps">
           <div><b>Step 1</b><strong>Find 5 peers</strong>who share the interest</div>
-          <div><b>Step 2</b><strong>Write a charter</strong>purpose, rules, roles</div>
+          <div><b>Step 2</b><strong>Write a charter</strong>purpose, rules, safety plan</div>
           <div><b>Step 3</b><strong>Ask a mentor</strong>to advise, not to lead</div>
           <div><b>Step 4</b><strong>Present it</strong>at Town Meeting</div>
         </div>
       </div>
-      <div class="life-photo reveal"><img src="images/club.jpg" alt="Four students laughing together around a table with laptops and coffee" loading="lazy"></div>
+      <div class="life-photo reveal"><img src="images/campfire-night.jpg" alt="Students sitting around a campfire in a dark forest at night" loading="lazy"></div>
     </div>
     <div class="clubs reveal" aria-label="Current clubs">
-      <span class="club">Philosophy Café</span><span class="club">Debate &amp; Dissent Society</span><span class="club">Founders' Lab</span><span class="club">Indie Film Collective</span><span class="club">Robotics Guild</span><span class="club">Open Mic &amp; Music Collective</span><span class="club">Community Service Corps</span><span class="club">Wilderness &amp; Solitude Expeditions</span><span class="club">Climate Action Council</span><span class="club">Student Press</span>
+      <span class="club">Whitewater Kayaking Club</span><span class="club">Climbing Crew</span><span class="club">Fire Circle Debate Society</span><span class="club">River Restoration Corps</span><span class="club">Star-Gazing Society</span><span class="club">Birding &amp; Tracking Society</span><span class="club">Seed Library &amp; Farm Stand</span><span class="club">Trail Crew</span><span class="club">Outdoor Film Collective</span><span class="club">Wilderness First Responders</span>
     </div>
 
     <div style="margin-top:clamp(72px,9vw,110px)" class="reveal">
@@ -831,41 +729,42 @@ footer a:hover{color:var(--on-band)}
     </div>
     <div class="principles">
       <div class="principle reveal"><span class="rn">i.</span><h4>Own your choices.</h4><p>You are free to choose, and you are responsible for what follows. No excuses, no blaming others, and always the chance to choose again.</p></div>
-      <div class="principle reveal"><span class="rn">ii.</span><h4>Protect others' freedom.</h4><p>Your freedom ends where it limits someone else's. Respect, safety and consent are non-negotiable.</p></div>
-      <div class="principle reveal"><span class="rn">iii.</span><h4>Speak honestly.</h4><p>Authenticity starts with honesty: about your work, your effort and yourself. Disagreement is welcome when it is respectful.</p></div>
+      <div class="principle reveal"><span class="rn">ii.</span><h4>Protect others' freedom.</h4><p>Your freedom ends where it limits someone else's. Respect, safety and consent are non-negotiable, on campus and on the trail.</p></div>
+      <div class="principle reveal"><span class="rn">iii.</span><h4>Leave it better.</h4><p>Responsibility reaches past people to the land. Every trail, stream and campsite should be better after you were there.</p></div>
     </div>
 
     <div class="rules-split">
       <div class="reveal">
         <p class="eyebrow" style="margin-bottom:6px">Rituals &amp; Traditions</p>
         <ul class="rituals">
-          <li><span class="when">Daily · 08:30</span><b>Morning Reflection</b><span>The school day begins in silence, with each student writing an intention.</span></li>
-          <li><span class="when">Weekly · Fridays</span><b>Town Meeting</b><span>Students and mentors vote equally on rules, new courses and new clubs.</span></li>
-          <li><span class="when">First week of school</span><b>Path Contract Day</b><span>Each student signs their learning plan aloud: “This is the path I choose.”</span></li>
+          <li><span class="when">Daily · sunrise</span><b>Sunrise Reflection</b><span>The day begins in silence on the trail, with each student writing an intention.</span></li>
+          <li><span class="when">Weekly · Fridays</span><b>Town Meeting at the Fire Circle</b><span>Students and mentors vote equally on rules, new electives and new clubs.</span></li>
+          <li><span class="when">First week of school</span><b>Path Contract Day</b><span>Each student signs their plan at the trailhead: “This is the path I choose.”</span></li>
+          <li><span class="when">Each spring</span><b>The Solo</b><span>24 hours alone in nature with water, shelter and a journal. Many students call it the day they met themselves.</span></li>
           <li><span class="when">End of each term</span><b>Authorship Showcase</b><span>Students present Passion Projects to families and the community.</span></li>
-          <li><span class="when">Graduation</span><b>The Crossroads Ceremony</b><span>No valedictorian. Every graduate gives a one-minute speech about who they chose to become.</span></li>
+          <li><span class="when">Graduation</span><b>The Crossroads Ceremony</b><span>Held at the summit overlook. No valedictorian: every graduate speaks about who they chose to become.</span></li>
         </ul>
       </div>
       <div class="hidden-cur reveal">
         <p class="eyebrow">The Hidden Curriculum</p>
         <h3 style="color:var(--on-band)">What students learn without being told</h3>
         <dl>
-          <div><dt>Your time is your responsibility.</dt><dd>With no bells, students learn to plan, prioritize and keep commitments.</dd></div>
+          <div><dt>Nature doesn't negotiate.</dt><dd>Weather, rivers and mountains teach that choices have real consequences.</dd></div>
+          <div><dt>Your time is your responsibility.</dt><dd>With no bells, students plan their days around daylight, seasons and commitments.</dd></div>
           <div><dt>Your voice changes things.</dt><dd>When students write the rules, they learn that their community is theirs to shape.</dd></div>
           <div><dt>Mistakes are part of becoming.</dt><dd>Narrative feedback and revision show that failure is information, not a verdict.</dd></div>
-          <div><dt>Authority is earned through dialogue.</dt><dd>Mentors sit in the circle, use first names and explain their reasoning.</dd></div>
           <div><dt>You are not a number.</dt><dd>With no rank and no curve, students compare themselves only to who they were.</dd></div>
         </dl>
       </div>
     </div>
 
     <div class="behaviors reveal">
-      <div><b>Self-scheduling</b><span>Students plan their open blocks each Monday and share the plan with their mentor.</span></div>
-      <div><b>Keeping commitments</b><span>A chosen commitment is a promise to your team.</span></div>
-      <div><b>Asking for help</b><span>Seeking support is a sign of responsibility, not weakness.</span></div>
+      <div><b>Self-scheduling</b><span>Students plan their field blocks each Monday and share the plan with their mentor.</span></div>
+      <div><b>Keeping commitments</b><span>On an expedition, your crew depends on you.</span></div>
+      <div><b>Stewardship</b><span>Everyone shares the work of the garden, the trails and the kitchen.</span></div>
       <div><b>Restorative repair</b><span>Broken rules lead to a conversation and a plan to make things right, not punishment.</span></div>
     </div>
-    <p class="tension reveal"><b>An honest challenge we plan for:</b> complete freedom can overwhelm a 14-year-old. That is why freedom grows with the student. Ninth graders choose within guided options and meet their mentor weekly. Seniors design almost all of their own schedule.</p>
+    <p class="tension reveal"><b>An honest challenge we plan for:</b> freedom outdoors can overwhelm a 14-year-old, and nature carries real risk. So freedom grows with the student: ninth graders choose within guided options, and seniors design almost all of their own schedule. Every outdoor activity has a safety plan, and every mentor is a certified Wilderness First Responder.</p>
   </div>
 </section>
 
@@ -874,44 +773,45 @@ footer a:hover{color:var(--on-band)}
   <div class="wrap">
     <div class="section-head reveal">
       <p class="eyebrow">Our Teachers · We Call Them Mentors</p>
-      <h2>A guide beside the student, not a sage on the stage.</h2>
-      <p class="lede">An existentialist teacher doesn't decide who a student should become. They ask the questions that help students decide for themselves, then support the path the student chooses.</p>
+      <h2>A guide on the trail, not a sage on the stage.</h2>
+      <p class="lede">An existentialist teacher doesn't decide who a student should become. Out in the field, mentors ask the questions that help students decide for themselves, keep them safe, then step back.</p>
     </div>
     <div class="mentor-grid">
       <div class="reveal">
         <div class="tbl-cap" style="margin-bottom:16px">Teacher training requirements</div>
         <div class="req">
-          <div><b>Degree</b><span>Bachelor's in their subject area; master's preferred.</span></div>
+          <div><b>Degree</b><span>Bachelor's in environmental science, ecology or a related field; master's preferred.</span></div>
           <div><b>Licensure</b><span>A state teaching certification.</span></div>
+          <div><b>Wilderness</b><span>Wilderness First Responder certification and Leave No Trace training.</span></div>
           <div><b>Fellowship</b><span>The 120-hour Mentor Fellowship below, completed before teaching.</span></div>
-          <div><b>Ongoing</b><span>40 hours of professional learning every year, plus peer observation.</span></div>
+          <div><b>Ongoing</b><span>40 hours of professional learning every year, including a summer field course.</span></div>
         </div>
         <div class="fellow">
           <div class="fellow-head"><span class="tbl-cap" style="border:0;padding:0">The Mentor Fellowship</span></div>
           <div class="fellow-bar" role="img" aria-label="120 hours in three phases of 40 hours each"><span>Understand · 40 h</span><span>Support · 40 h</span><span>Design · 40 h</span></div>
           <div class="fellow-phases">
-            <div><small>Phase 1 · Understand</small><p><b>Existentialist philosophy of education</b>How the ideas of freedom and responsibility shape a classroom.</p><p><b>Socratic facilitation</b>Asking open questions instead of giving answers.</p></div>
+            <div><small>Phase 1 · Understand</small><p><b>Existentialist philosophy of education</b>How freedom and responsibility shape learning outdoors.</p><p><b>Socratic facilitation</b>Asking open questions instead of giving answers.</p></div>
             <div><small>Phase 2 · Support</small><p><b>Coaching &amp; mentorship</b>Goal-setting conversations with each student.</p><p><b>Adolescent identity &amp; counseling</b>Spotting when a student is struggling, and helping.</p></div>
-            <div><small>Phase 3 · Design</small><p><b>Personalized learning</b>Building Path Contracts and choice boards.</p><p><b>Narrative assessment</b>Feedback that describes growth instead of ranking it.</p></div>
+            <div><small>Phase 3 · Design</small><p><b>Field-based learning</b>Turning the land into lessons, Path Contracts and choice boards.</p><p><b>Narrative assessment</b>Feedback that describes growth instead of ranking it.</p></div>
           </div>
         </div>
       </div>
       <div class="mentor-role reveal">
-        <img src="images/collab.jpg" alt="A mentor laughing with two students as they work on laptops" loading="lazy">
+        <img src="images/mountain-circle.jpg" alt="A group of students sitting arm in arm, looking out over mountains" loading="lazy">
         <div class="body">
           <h3>Individualized student support</h3>
           <div class="ratio">
-            <div><b>12</b><span>students in each mentor's advisory group</span></div>
+            <div><b>12</b><span>students in each mentor's advisory crew</span></div>
             <div><b>20′</b><span>one-on-one conference per student each week</span></div>
             <div><b>4</b><span>years with the same mentor, grades 9–12</span></div>
           </div>
           <div class="does">
             <p class="y">Asks questions</p><p class="n">Gives the answer</p>
             <p class="y">Co-signs the Path Contract</p><p class="n">Assigns the path</p>
-            <p class="y">Offers options &amp; resources</p><p class="n">Makes the decision</p>
+            <p class="y">Keeps students safe</p><p class="n">Makes every decision</p>
             <p class="y">Models lifelong learning</p><p class="n">Claims to know it all</p>
           </div>
-          <p class="muted" style="font-size:.92rem">Mentors model what they teach. Each summer they complete their own Passion Project and present it to students in the fall.</p>
+          <p class="muted" style="font-size:.92rem">Mentors model what they teach. Each summer they complete their own Passion Project in the field and present it to students in the fall.</p>
         </div>
       </div>
     </div>
@@ -950,15 +850,16 @@ footer a:hover{color:var(--on-band)}
     <div class="foot-grid">
       <div class="foot-brand">
         <a class="brand" href="#home"><svg width="34" height="37" aria-hidden="true"><use href="#crest"/></svg><span class="brand-name">The Freedom Academy<small style="color:var(--brass)">Your Education. Your Choices. Your Future.</small></span></a>
-        <p>An independent upper school, grades 9–12, built on the philosophy of existentialism.</p>
+        <p>An outdoor upper school for environmental science, grades 9–12, built on the philosophy of existentialism.</p>
       </div>
-      <div><h5>Explore</h5><ul><li><a href="#mission">Mission &amp; Goals</a></li><li><a href="#philosophy">Our Philosophy</a></li><li><a href="#campus">Campus</a></li><li><a href="#classroom">Classroom Layout</a></li><li><a href="#academics">Academics</a></li></ul></div>
+      <div><h5>Explore</h5><ul><li><a href="#mission">Mission &amp; Goals</a></li><li><a href="#philosophy">Our Philosophy</a></li><li><a href="#campus">Campus</a></li><li><a href="#classroom">Outdoor Classroom</a></li><li><a href="#academics">Academics</a></li></ul></div>
       <div><h5>Community</h5><ul><li><a href="#life">Student Life</a></li><li><a href="#life">Rules &amp; Rituals</a></li><li><a href="#mentors">Our Teachers</a></li><li><a href="#path">Create Your Path</a></li></ul></div>
     </div>
     <div class="foot-legal">
       <span id="credits">A fictional school designed for <i>Philosophies of Education: Designing a School</i>. Group project by <span id="groupNames"></span>.</span>
       <span>Photography: Unsplash contributors (Unsplash License).</span>
     </div>
+    <p class="foot-made">Website developed by Luis Coronel with the help of Claude.</p>
   </div>
 </footer>
 
@@ -1008,15 +909,15 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObser
   },{threshold:.5}).observe(vs);
 }
 
-/* ===== classroom: zones, 3D model, 2D fallback ===== */
+/* ===== outdoor classroom: zones, 3D model, text fallback ===== */
 const ZONES={
-  seminar:{n:1,name:'Seminar Circle',k:'Zone 1 · Dialogue',rect:[110,190,250,230],text:'A round table for 10 with no head seat. Used for Socratic seminars, class decisions and debates. The mentor sits in the circle as an equal voice.',why:'Truth is discovered through dialogue, not delivered from the front of the room.'},
-  pods:{n:2,name:'Collaboration Pods',k:'Zone 2 · Teamwork',rect:[400,110,250,250],text:'Two movable tables for four with a rolling whiteboard. Students form their own teams around shared projects and split them up when the work changes.',why:'Freedom is lived with others. Students choose who to work with and answer to their team.'},
-  nooks:{n:3,name:'Solitude Nooks',k:'Zone 3 · Independence',rect:[672,60,96,300],text:'Three sound-dampened booths along the window wall for silent reading, writing and focused independent work. No permission needed to use them.',why:'Kierkegaard said the self is found in solitude. Every student has a right to quiet.'},
-  making:{n:4,name:'Making Bench',k:'Zone 4 · Hands-on',rect:[400,400,368,112],text:'A long workbench with art supplies, building materials, a 3D printer and laptops. Here ideas become prototypes, artworks and models.',why:'Students show learning in the form they choose, and they create rather than consume.'},
-  lounge:{n:5,name:'Reading Lounge',k:'Zone 5 · Inquiry',rect:[60,40,300,130],text:'A rug, soft seating and a student-curated bookshelf. Students add books that changed their thinking, each with a handwritten note.',why:'Meaning is personal, and students build the library that reflects them.'},
-  wall:{n:6,name:'Reflection Wall',k:'Zone 6 · Expression',rect:[30,190,58,300],text:'A full-length writable wall where students post questions, goals and weekly reflections. It is never graded and never erased by adults.',why:'Thinking becomes visible, and the room belongs to the people who use it.'},
-  mentor:{n:7,name:"Mentor's Corner",k:'Zone 7 · Guidance',rect:[250,440,120,72],text:'A small desk near the entrance with a second chair for one-on-one conferences. It is deliberately not at the front. Mentors spend most of the day moving between zones.',why:'The teacher is a guide who supports, not an authority who controls.'}
+  seminar:{n:1,name:'The Fire Circle',k:'Zone 1 · Dialogue',c:[-3,2],r:3.6,view:[4.6,3,5.2],text:'Log benches around a stone fire pit, with no head seat. Fire Circle seminars, debates and the Friday Town Meeting happen here. The mentor sits on the same log as everyone else.',why:'Truth is discovered through dialogue, not delivered from the front of a room.'},
+  pavilion:{n:2,name:'Timber Pavilion',k:'Zone 2 · Teamwork',c:[4,-6],r:3.6,view:[-1.5,3.2,7.5],text:'An open-sided timber roof over long tables and a rolling whiteboard, so crews can plan projects and expeditions in any weather.',why:'Freedom is lived with others. Students choose their crews and answer to them.'},
+  river:{n:3,name:'River Field Lab',k:'Zone 3 · Inquiry',c:[10.2,-2],r:3.4,view:[-6,3.4,3.2],text:'A sampling station and footbridge on the campus stream. Students test water quality, count insects and track how the river changes through the seasons.',why:'Students ask their own questions of the real world and own the answers they find.'},
+  garden:{n:4,name:'Garden & Greenhouse',k:'Zone 4 · Hands-on',c:[-9.5,-7],r:4,view:[5.5,3.6,5.5],text:'Raised beds and a greenhouse where students grow food for the school kitchen and run soil experiments.',why:'Students learn by doing and take responsibility for something alive.'},
+  solitude:{n:5,name:'Solitude Hammocks',k:'Zone 5 · Independence',c:[-12.5,6],r:3.4,view:[6.5,3,3.5],text:'Hammocks strung between pines at the forest edge for silent reading, writing and thinking. No permission needed.',why:'Kierkegaard said the self is found in solitude. Every student has a right to quiet.'},
+  trail:{n:6,name:'Reflection Trail',k:'Zone 6 · Expression',c:[-5,11],r:3.2,view:[4,3.2,-5.5],text:'A winding trail through the woods with question posts along the way: “What did you choose today?” Students stop, write in their field journals and keep walking.',why:'Meaning is not handed out. Students make it, one step and one question at a time.'},
+  basecamp:{n:7,name:'Basecamp Cabin',k:'Zone 7 · Guidance',c:[5,10],r:3.8,view:[-4,3.2,-7],text:"The mentors' log cabin and gear shed at the trailhead, with kayaks, packs and first-aid kits. Mentors hold one-on-one conferences on the porch.",why:'The teacher is a guide who equips and supports, not an authority who controls.'}
 };
 const ZIDS=Object.keys(ZONES);
 const zoneList=$('#zoneList');
@@ -1026,19 +927,12 @@ function zoneInfo(id){const z=ZONES[id];return `<span class="k">${z.k}</span><h4
 
 let room3d=null;
 try{room3d=initRoom3D()}catch(e){console.warn('3D classroom unavailable',e);room3d=null}
-
 if(!room3d){
-  // 2D floor plan fallback
+  // text fallback when 3D can't run
   $('#room3d').hidden=true;$('#planFallback').hidden=false;
-  const zoneCard=$('#zoneCard');
-  const show2d=id=>{zoneCard.innerHTML=zoneInfo(id);$$('.zone').forEach(g=>g.classList.toggle('on',g.dataset.zone===id));markChip(id)};
-  zoneList.addEventListener('click',e=>{const b=e.target.closest('.zone-chip');if(b)show2d(b.dataset.zone)});
-  $$('.zone').forEach(g=>{
-    g.addEventListener('click',()=>show2d(g.dataset.zone));
-    g.addEventListener('mouseenter',()=>show2d(g.dataset.zone));
-    g.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show2d(g.dataset.zone)}});
-  });
-  show2d('seminar');
+  const show=id=>{$('#zoneCard').innerHTML=zoneInfo(id);markChip(id)};
+  zoneList.addEventListener('click',e=>{const b=e.target.closest('.zone-chip');if(b)show(b.dataset.zone)});
+  show('seminar');
 }else{
   zoneList.addEventListener('click',e=>{const b=e.target.closest('.zone-chip');if(b)room3d.select(b.dataset.zone)});
 }
@@ -1052,124 +946,134 @@ function initRoom3D(){
   if(!renderer.getContext())return null;
   renderer.setPixelRatio(Math.min(window.devicePixelRatio||1,2));
   renderer.outputEncoding=THREE.sRGBEncoding;
-  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=.82;
   renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;
 
   const scene=new THREE.Scene();
-  scene.background=new THREE.Color('#0E1813');
-  scene.fog=new THREE.Fog('#0E1813',24,52);
+  // sky: soft late-afternoon gradient
+  const sc=document.createElement('canvas');sc.width=4;sc.height=256;const sx=sc.getContext('2d');const g=sx.createLinearGradient(0,0,0,256);
+  g.addColorStop(0,'#5F8FB0');g.addColorStop(.55,'#A9C6D2');g.addColorStop(1,'#E6E2CF');sx.fillStyle=g;sx.fillRect(0,0,4,256);
+  const sky=new THREE.CanvasTexture(sc);sky.encoding=THREE.sRGBEncoding;scene.background=sky;
+  scene.fog=new THREE.Fog('#C9D6CF',45,120);
   if(THREE.RoomEnvironment){const pm=new THREE.PMREMGenerator(renderer);scene.environment=pm.fromScene(new THREE.RoomEnvironment(),0.04).texture;pm.dispose()}
-  const camera=new THREE.PerspectiveCamera(40,1,0.05,120);
-  const HOME={pos:new THREE.Vector3(8.5,10.5,11.5),target:new THREE.Vector3(0,0.3,0.2)};
+  const camera=new THREE.PerspectiveCamera(40,1,0.1,400);
+  const HOME={pos:new THREE.Vector3(21,19,27),target:new THREE.Vector3(-1,0,1.5)};
   camera.position.copy(HOME.pos);
   const controls=new THREE.OrbitControls(camera,canvas);
   controls.target.copy(HOME.target);controls.enableDamping=true;controls.dampingFactor=0.08;
-  controls.maxPolarAngle=Math.PI*0.48;controls.minDistance=4;controls.maxDistance=24;controls.enablePan=false;
-  controls.autoRotate=!matchMedia('(prefers-reduced-motion: reduce)').matches;controls.autoRotateSpeed=0.45;
+  controls.maxPolarAngle=Math.PI*0.47;controls.minDistance=8;controls.maxDistance=60;controls.enablePan=false;
+  controls.autoRotate=!matchMedia('(prefers-reduced-motion: reduce)').matches;controls.autoRotateSpeed=0.4;
   controls.addEventListener('start',()=>{controls.autoRotate=false});
 
-  // lights
-  scene.add(new THREE.HemisphereLight('#FFF4E0','#24332A',0.55));
-  const sun=new THREE.DirectionalLight('#FFE9C4',1.6);
-  sun.position.set(9,13,-7);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);
-  Object.assign(sun.shadow.camera,{left:-10,right:10,top:10,bottom:-10,near:1,far:40});sun.shadow.bias=-0.0004;sun.shadow.normalBias=0.02;
+  scene.add(new THREE.HemisphereLight('#E8F0FF','#3A4A2E',0.4));
+  const sun=new THREE.DirectionalLight('#FFE6BF',1.9);
+  sun.position.set(18,24,10);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);
+  Object.assign(sun.shadow.camera,{left:-26,right:26,top:26,bottom:-26,near:1,far:80});sun.shadow.bias=-0.0005;sun.shadow.normalBias=0.03;
   scene.add(sun);
 
-  // helpers
-  const M=(c,o)=>new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:0.75,metalness:0},o||{}));
-  const mat={oak:M('#B88A57',{roughness:.55}),oakDark:M('#8C6640',{roughness:.6}),steel:M('#2B302D',{roughness:.45,metalness:.5}),forest:M('#2E5A45',{roughness:.9}),sage:M('#5E7F6A',{roughness:.95}),
-    brass:M('#C9A867',{roughness:.35,metalness:.7}),felt:M('#4C6B59',{roughness:1}),white:M('#F3F0E8',{roughness:.4}),char:M('#232826',{roughness:.6}),rug:M('#7A5A35',{roughness:1}),
-    leaf:M('#3E6A48',{roughness:.9}),leaf2:M('#58824F',{roughness:.9}),bark:M('#4B3826',{roughness:1}),pot:M('#C9C1B0',{roughness:.8}),screen:M('#16201B',{roughness:.2,metalness:.2,emissive:'#2E4A3C',emissiveIntensity:.5})};
-  const s=0.016,X=px=>(px-400)*s,Z=py=>(py-274)*s;
-  const XMIN=X(24),XMAX=X(776),ZMIN=Z(24),ZMAX=Z(524),H=2.7,T=0.14;
-  function mesh(geo,m,x,y,z,parent){const o=new THREE.Mesh(geo,m);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;(parent||scene).add(o);return o}
+  const M=(c,o)=>new THREE.MeshStandardMaterial(Object.assign({color:c,roughness:.85,metalness:0},o||{}));
+  const mat={wood:M('#8A6239'),woodLight:M('#B88A57',{roughness:.7}),log:M('#6B4A2E',{roughness:.95}),bark:M('#4B3826',{roughness:1}),roof:M('#4D3A2A',{roughness:.9}),
+    stone:M('#8E8E86',{roughness:1}),rock:M('#7D7F78',{roughness:1}),soil:M('#4A3424',{roughness:1}),leaf:M('#3E6A48'),leaf2:M('#58824F'),pine:M('#2F5A40'),pine2:M('#3B6B4A'),
+    path:M('#B79E78',{roughness:1}),glass:new THREE.MeshStandardMaterial({color:'#D6ECE4',roughness:.05,metalness:.1,transparent:true,opacity:.28,depthWrite:false}),
+    frame:M('#2B302D',{roughness:.5,metalness:.4}),white:M('#F3F0E8',{roughness:.5}),fabric:M('#C9A867'),fabric2:M('#2E5A45'),fabric3:M('#B05A3C'),
+    water:new THREE.MeshStandardMaterial({color:'#3F7E8C',roughness:.12,metalness:.25}),mountain:M('#6F8299',{roughness:1,flatShading:true}),snow:M('#EEF2F2',{roughness:.8,flatShading:true})};
+  function mesh(geo,m,x,y,z,p){const o=new THREE.Mesh(geo,m);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;(p||scene).add(o);return o}
   const box=(w,h,d,m,x,y,z,p)=>mesh(new THREE.BoxGeometry(w,h,d),m,x,y,z,p);
-  const cyl=(rt,rb,h,m,x,y,z,p,seg)=>mesh(new THREE.CylinderGeometry(rt,rb,h,seg||28),m,x,y,z,p);
-  const groups={};ZIDS.forEach(id=>{const g=new THREE.Group();g.userData.zone=id;groups[id]=g;scene.add(g)});
-  function face(o,tx,tz){o.rotation.y=Math.atan2(tx-o.position.x,tz-o.position.z)}
-  function chair(x,z,tx,tz,p,seat){
-    const g=new THREE.Group();g.position.set(x,0,z);p.add(g);
-    box(.46,.06,.44,seat||mat.forest,0,.46,0,g);box(.46,.4,.05,seat||mat.forest,0,.72,-.21,g);
-    [[-.2,-.18],[.2,-.18],[-.2,.18],[.2,.18]].forEach(([a,b])=>cyl(.018,.018,.44,mat.steel,a,.22,b,g,8));
-    face(g,tx,tz);return g;
+  const cyl=(rt,rb,h,m,x,y,z,p,seg)=>mesh(new THREE.CylinderGeometry(rt,rb,h,seg||16),m,x,y,z,p);
+  const groups={};ZIDS.forEach(id=>{const gr=new THREE.Group();gr.userData.zone=id;groups[id]=gr;scene.add(gr)});
+
+  // ground: meadow texture
+  const gc=document.createElement('canvas');gc.width=gc.height=512;const gx=gc.getContext('2d');gx.fillStyle='#4C6B3A';gx.fillRect(0,0,512,512);
+  for(let i=0;i<9000;i++){const x=(i*73.13)%512,y=(i*191.7)%512,l=26+((i*37)%12);gx.fillStyle=`hsl(${88+((i*11)%22)},${32+((i*7)%14)}%,${l}%)`;gx.fillRect(x,y,2,3)}
+  const gtex=new THREE.CanvasTexture(gc);gtex.encoding=THREE.sRGBEncoding;gtex.wrapS=gtex.wrapT=THREE.RepeatWrapping;gtex.repeat.set(14,14);
+  const ground=mesh(new THREE.CircleGeometry(70,64),new THREE.MeshStandardMaterial({map:gtex,roughness:1}),0,0,0);ground.rotation.x=-Math.PI/2;ground.castShadow=false;
+
+  // ribbon helper for river and paths
+  function ribbon(pts,width,m,y){
+    const curve=new THREE.CatmullRomCurve3(pts.map(([x,z])=>new THREE.Vector3(x,0,z)));const N=80,pos=[],idx=[];
+    for(let i=0;i<=N;i++){const t=i/N,p=curve.getPoint(t),d=curve.getTangent(t),nx=-d.z,nz=d.x,w=width*(.85+.15*Math.sin(t*9));pos.push(p.x+nx*w/2,y,p.z+nz*w/2,p.x-nx*w/2,y,p.z-nz*w/2);if(i<N){const a=i*2;idx.push(a,a+1,a+2,a+1,a+3,a+2)}}
+    const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(pos,3));geo.setIndex(idx);geo.computeVertexNormals();
+    m.side=THREE.DoubleSide;const o=new THREE.Mesh(geo,m);o.receiveShadow=true;scene.add(o);return curve;
   }
-  function stool(x,z,p){cyl(.19,.19,.05,mat.oak,x,.64,z,p);cyl(.025,.025,.6,mat.steel,x,.32,z,p,8);cyl(.2,.2,.02,mat.steel,x,.01,z,p)}
-  function table(w,d,x,z,p,h,top){h=h||.74;box(w,.05,d,top||mat.oak,x,h,z,p);const dx=w/2-.07,dz=d/2-.07;[[-dx,-dz],[dx,-dz],[-dx,dz],[dx,dz]].forEach(([a,b])=>box(.05,h,.05,mat.steel,x+a,h/2,z+b,p))}
-  function laptop(x,y,z,rot,p){const g=new THREE.Group();g.position.set(x,y,z);g.rotation.y=rot||0;p.add(g);box(.34,.015,.23,mat.char,0,.008,0,g);const sc=box(.34,.22,.012,mat.screen,0,.11,-.115,g);sc.rotation.x=-.25;return g}
-  function plant(x,z,p,sz){sz=sz||1;cyl(.17*sz,.13*sz,.36*sz,mat.pot,x,.18*sz,z,p);const f=mesh(new THREE.IcosahedronGeometry(.34*sz,1),mat.leaf,x,.62*sz,z,p);f.scale.y=1.25;mesh(new THREE.IcosahedronGeometry(.22*sz,1),mat.leaf2,x+.12*sz,.85*sz,z-.05*sz,p)}
+  const riverPts=[[16,-26],[13,-14],[10.5,-7],[12,-1],[10,5],[12.5,12],[11,26]];
+  const river=ribbon(riverPts,3.2,mat.water,.04);
+  ribbon(riverPts,4.6,M('#7A6A4E',{roughness:1}),.02);
+  for(let i=0;i<46;i++){const t=i/46,p=river.getPoint(t),d=river.getTangent(t),side=i%2?1:-1,o=2.3+((i*7)%5)*.15;const r=mesh(new THREE.DodecahedronGeometry(.22+((i*3)%4)*.08,0),mat.rock,p.x-d.z*o*side,.12,p.z+d.x*o*side);r.rotation.set(i,i*2,0)}
+  // paths
+  const pathM=mat.path;
+  ribbon([[5,13],[4,6.5],[-1,4.5],[-3,2]],1.2,pathM,.03);
+  ribbon([[-1,4.5],[2,0],[4,-3.5]],1.1,pathM,.031);
+  ribbon([[2,0],[7.5,-1.5],[9.2,-2]],1.1,pathM,.032);
+  ribbon([[-3,2],[-6,-2],[-8,-4.5]],1.1,pathM,.033);
+  ribbon([[5,13],[0,13.5],[-4,11.5],[-7,9.5],[-10.5,8],[-12.5,6]],1,pathM,.034);
 
-  // floor with plank texture
-  const fc=document.createElement('canvas');fc.width=fc.height=1024;const fx=fc.getContext('2d');
-  for(let row=0;row<16;row++){let x0=-(row*137%300);while(x0<1024){const len=260+((row*53+x0)%5)*40;const l=58+((row*7+x0)%9)*1.6;fx.fillStyle=`hsl(32,${36+((x0+row)%5)}%,${l}%)`;fx.fillRect(x0,row*64,len,64);fx.fillStyle='rgba(60,40,20,.35)';fx.fillRect(x0,row*64,2,64);x0+=len}fx.fillStyle='rgba(60,40,20,.28)';fx.fillRect(0,row*64,1024,2)}
-  const ftex=new THREE.CanvasTexture(fc);ftex.encoding=THREE.sRGBEncoding;ftex.wrapS=ftex.wrapT=THREE.RepeatWrapping;ftex.repeat.set(3,2);ftex.anisotropy=renderer.capabilities.getMaxAnisotropy();
-  const floor=mesh(new THREE.PlaneGeometry(XMAX-XMIN,ZMAX-ZMIN),new THREE.MeshStandardMaterial({map:ftex,roughness:.6}),0,0,0);floor.rotation.x=-Math.PI/2;floor.castShadow=false;
-  const ground=mesh(new THREE.PlaneGeometry(140,140),M('#17271D',{roughness:1}),0,-0.02,0);ground.rotation.x=-Math.PI/2;ground.castShadow=false;
-
-  // walls (fade out the ones between the camera and the room, dollhouse style)
-  const walls=[];
-  function wall(name,n,p){const g=new THREE.Group();scene.add(g);const w={g,n,p:new THREE.Vector3(p[0],1,p[1]),t:1,wall:M('#E9E2D2',{transparent:true,roughness:.9}),glass:new THREE.MeshStandardMaterial({color:'#BFD8D1',roughness:.05,metalness:.1,transparent:true,opacity:.18,depthWrite:false}),frame:M('#2B302D',{transparent:true,roughness:.5,metalness:.4})};walls.push(w);return w}
-  function segX(w,x1,x2,z,y0,y1,m){const o=box(x2-x1,y1-y0,T,m||w.wall,(x1+x2)/2,(y0+y1)/2,z,w.g);return o}
-  function segZ(w,z1,z2,x,y0,y1,m){return box(T,y1-y0,z2-z1,m||w.wall,x,(y0+y1)/2,(z1+z2)/2,w.g)}
-  function windowX(w,x1,x2,z){segX(w,x1,x2,z,0,.55);segX(w,x1,x2,z,2.35,H);const g=box(x2-x1,1.8,.02,w.glass,(x1+x2)/2,1.45,z,w.g);g.castShadow=false;for(let x=x1;x<=x2+.01;x+=(x2-x1)/5)box(.05,1.8,.08,w.frame,x,1.45,z,w.g)}
-  function windowZ(w,z1,z2,x){segZ(w,z1,z2,x,0,.55);segZ(w,z1,z2,x,2.35,H);const g=box(.02,1.8,z2-z1,w.glass,x,1.45,(z1+z2)/2,w.g);g.castShadow=false;for(let z=z1;z<=z2+.01;z+=(z2-z1)/4)box(.08,1.8,.05,w.frame,x,1.45,z,w.g)}
-  const wN=wall('north',new THREE.Vector3(0,0,-1),[0,ZMIN]);segX(wN,XMIN-T/2,X(380),ZMIN-T/2,0,H);windowX(wN,X(380),X(760),ZMIN-T/2);segX(wN,X(760),XMAX+T/2,ZMIN-T/2,0,H);
-  const wE=wall('east',new THREE.Vector3(1,0,0),[XMAX,0]);segZ(wE,ZMIN,Z(40),XMAX+T/2,0,H);windowZ(wE,Z(40),Z(370),XMAX+T/2);segZ(wE,Z(370),ZMAX,XMAX+T/2,0,H);
-  const wS=wall('south',new THREE.Vector3(0,0,1),[0,ZMAX]);segX(wS,XMIN-T/2,X(130),ZMAX+T/2,0,H);segX(wS,X(130),X(210),ZMAX+T/2,2.2,H);segX(wS,X(210),XMAX+T/2,ZMAX+T/2,0,H);
-  const door=box(X(210)-X(130)-.04,2.15,.03,wS.glass,0,1.08,0,wS.g);door.geometry.translate((X(210)-X(130))/2,0,0);door.position.set(X(130),1.08,ZMAX-.02);door.rotation.y=-0.9;door.castShadow=false;
-  const wW=wall('west',new THREE.Vector3(-1,0,0),[XMIN,0]);segZ(wW,ZMIN,ZMAX,XMIN-T/2,0,H);
-  walls.forEach(w=>w.g.traverse(o=>{if(o.isMesh)o.userData.op=o.material.opacity}));
-
-  // zone floor tints + pins
+  // zone tints + pins
   const tints={},pins=[],lines=[];
   function pinTexture(n){const c=document.createElement('canvas');c.width=c.height=128;const x=c.getContext('2d');x.fillStyle='#CDAA68';x.beginPath();x.arc(64,64,56,0,Math.PI*2);x.fill();x.lineWidth=6;x.strokeStyle='#F2EDE0';x.stroke();x.fillStyle='#15241D';x.font='700 64px "Hanken Grotesk", Arial, sans-serif';x.textAlign='center';x.textBaseline='middle';x.fillText(String(n),64,68);const t=new THREE.CanvasTexture(c);t.encoding=THREE.sRGBEncoding;return t}
-  ZIDS.forEach(id=>{
-    const z=ZONES[id],[rx,ry,rw,rh]=z.rect,cx=X(rx+rw/2),cz=Z(ry+rh/2);
-    z.c=new THREE.Vector3(cx,0,cz);
-    const t=mesh(new THREE.PlaneGeometry(rw*s,rh*s),new THREE.MeshBasicMaterial({color:'#CDAA68',transparent:true,opacity:.07,depthWrite:false}),cx,.006,cz,groups[id]);
-    t.rotation.x=-Math.PI/2;t.castShadow=t.receiveShadow=false;tints[id]=t;
-    const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:pinTexture(z.n),depthTest:false,transparent:true}));
-    sp.position.set(cx,2.05,cz);sp.scale.set(.5,.5,.5);sp.renderOrder=10;sp.userData.zone=id;scene.add(sp);pins.push(sp);
-    const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(cx,.02,cz),new THREE.Vector3(cx,1.8,cz)]),new THREE.LineBasicMaterial({color:'#CDAA68',transparent:true,opacity:.45}));
-    line.userData.zone=id;scene.add(line);lines.push(line);
-  });
+  ZIDS.forEach(id=>{const z=ZONES[id],[cx,cz]=z.c;
+    const t=mesh(new THREE.CircleGeometry(z.r,40),new THREE.MeshBasicMaterial({color:'#E7C982',transparent:true,opacity:.08,depthWrite:false}),cx,.05,cz,groups[id]);t.rotation.x=-Math.PI/2;t.castShadow=t.receiveShadow=false;tints[id]=t;
+    const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:pinTexture(z.n),depthTest:false,transparent:true}));sp.position.set(cx,3.2,cz);sp.scale.set(1.1,1.1,1.1);sp.renderOrder=10;sp.userData.zone=id;scene.add(sp);pins.push(sp);
+    const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(cx,.05,cz),new THREE.Vector3(cx,2.7,cz)]),new THREE.LineBasicMaterial({color:'#E7C982',transparent:true,opacity:.55}));line.userData.zone=id;scene.add(line);lines.push(line)});
 
-  // 1 · Seminar Circle
-  {const g=groups.seminar,cx=X(235),cz=Z(305);cyl(.99,.99,.05,mat.oak,cx,.74,cz,g,48);cyl(.07,.07,.72,mat.steel,cx,.37,cz,g);cyl(.42,.42,.03,mat.steel,cx,.015,cz,g);
-   for(let i=0;i<10;i++){const a=i/10*Math.PI*2;chair(cx+Math.cos(a)*1.38,cz+Math.sin(a)*1.38,cx,cz,g,i%3===0?mat.sage:mat.forest)}
-   for(let i=0;i<4;i++){const a=i/4*Math.PI*2+.4;box(.21,.02,.29,mat.white,cx+Math.cos(a)*.62,.775,cz+Math.sin(a)*.62,g).rotation.y=-a}
-   cyl(.06,.08,.12,mat.pot,cx,.83,cz,g);mesh(new THREE.IcosahedronGeometry(.12,1),mat.leaf2,cx,.96,cz,g)}
-  // 2 · Collaboration Pods
-  {const g=groups.pods;[[495,180,[[465,138],[525,138],[465,222],[525,222]]],[555,292,[[525,250],[585,250],[525,334],[585,334]]]].forEach(([px,py,cs])=>{const cx=X(px),cz=Z(py);table(1.76,.96,cx,cz,g);cs.forEach(([a,b])=>chair(X(a),Z(b),cx,cz,g));laptop(cx-.4,.765,cz-.15,0,g);laptop(cx+.4,.765,cz+.15,Math.PI,g)});
-   const wx=X(590),wz=Z(190);box(.04,1.0,1.3,mat.white,wx,1.35,wz,g);box(.06,.04,1.36,mat.steel,wx,.84,wz,g);[-.6,.6].forEach(o=>{box(.04,1.85,.04,mat.steel,wx,.93,wz+o,g);box(.4,.03,.05,mat.steel,wx,.03,wz+o,g)});
-   const notes=['#CDAA68','#8FB39A','#E8B9A0','#F2EDE0'];for(let i=0;i<9;i++)box(.012,.1,.1,M(notes[i%4]),wx-.03,1.15+(i%3)*.17,wz-.4+Math.floor(i/3)*.3,g)}
-  // 3 · Solitude Nooks
-  {const g=groups.nooks;[114,208,302].forEach(py=>{const cz=Z(py),x0=X(690),x1=X(758);box(x1-x0,1.55,.05,mat.felt,(x0+x1)/2,.78,cz-.64,g);box(x1-x0,1.55,.05,mat.felt,(x0+x1)/2,.78,cz+.64,g);box(.05,1.55,1.28,mat.felt,x1+.02,.78,cz,g);
-   table(.5,1.1,x1-.3,cz,g,.74);chair(x1-.82,cz,x1,cz,g,mat.sage);cyl(.015,.015,.4,mat.brass,x1-.4,.95,cz-.4,g,8);const sh=cyl(.05,.11,.12,mat.brass,x1-.4,1.15,cz-.4,g);sh.material=M('#E2C98F',{emissive:'#FFD58A',emissiveIntensity:.6})})}
-  // 4 · Making Bench
-  {const g=groups.making,cx=X(585),cz=Z(480);box(5.28,.06,.7,mat.oak,cx,.9,cz,g);box(5.2,.84,.6,mat.forest,cx,.42,cz+.02,g);[460,520,580,640,700].forEach(px=>stool(X(px),Z(446),g));
-   box(.45,.45,.42,mat.char,X(735),1.16,cz,g);box(.4,.02,.36,mat.brass,X(735),1.0,cz,g);
-   const jars=['#C0563E','#3E6FA8','#E3B341','#5E9C6A','#F2EDE0'];jars.forEach((c,i)=>cyl(.05,.05,.12,M(c,{roughness:.4}),X(470)+i*.14,.99,cz+.1,g,14));
-   box(.5,.3,.35,M('#B99B6B'),X(540),1.08,cz,g);box(.35,.2,.3,M('#A8875A'),X(540),1.33,cz,g);laptop(X(620),.935,cz,Math.PI,g);box(.6,.01,.4,mat.white,X(660),.94,cz,g)}
-  // 5 · Reading Lounge
-  {const g=groups.lounge,bx=X(174),bz=ZMIN+.2,bw=3.2,bh=1.9;box(bw,.04,.32,mat.oakDark,bx,bh,bz,g);box(bw,.04,.32,mat.oakDark,bx,.04,bz,g);
-   for(let i=0;i<=4;i++)box(.04,bh,.32,mat.oakDark,bx-bw/2+i*bw/4,bh/2,bz,g);
-   const bc=['#2E5A45','#7A3B2E','#C9A867','#3D4F6B','#E9E2D2','#5E7F6A','#8C6640','#B05A3C'];let k=0;
-   for(let sh=0;sh<4;sh++){const y0=.06+sh*.47;box(bw,.03,.3,mat.oakDark,bx,y0,bz,g);for(let b=0;b<4;b++){let x=bx-bw/2+b*bw/4+.06;const end=x+bw/4-.14;while(x<end){const w=.04+((k*7)%5)*.012,h=.26+((k*13)%6)*.025;if(x+w>end)break;box(w,h,.22,M(bc[k%bc.length]),x+w/2,y0+.015+h/2,bz,g);x+=w+.006;k++}}}
-   const rug=cyl(1,1,.012,mat.rug,X(160),.006,Z(118),g,48);rug.scale.z=.55;rug.castShadow=false;
-   [[95,118,'#C9A867'],[226,118,'#2E5A45'],[160,146,'#B05A3C']].forEach(([a,b,c])=>{const bb=mesh(new THREE.SphereGeometry(.36,24,16),M(c,{roughness:1}),X(a),.2,Z(b),g);bb.scale.y=.6});
-   const ax=X(317),az=Z(117),ac=g;box(.86,.42,.9,mat.forest,ax,.21,az,ac);box(.2,.5,.9,mat.forest,ax+.33,.62,az,ac);box(.66,.22,.14,mat.forest,ax-.1,.53,az-.38,ac);box(.66,.22,.14,mat.forest,ax-.1,.53,az+.38,ac);
-   cyl(.015,.015,1.5,mat.brass,ax+.3,.75,az-.7,g,8);const sh=cyl(.12,.2,.25,M('#E2C98F',{emissive:'#FFD58A',emissiveIntensity:.5}),ax+.3,1.55,az-.7,g)}
-  // 6 · Reflection Wall
-  {const g=groups.wall,wz=Z(340),wx=XMIN+.03;box(.04,2.0,4.48,mat.white,wx,1.2,wz,g);box(.08,.04,4.48,mat.brass,wx+.03,.2,wz,g);
-   const nc=['#CDAA68','#8FB39A','#E8B9A0','#F2EDE0','#9DB7D5'];for(let i=0;i<34;i++){const r=((i*37)%100)/100,q=((i*61)%100)/100;box(.006,.13,.13,M(nc[i%5]),wx+.025,.55+q*1.25,wz-2.0+r*4.0,g).rotation.x=(r-.5)*.25}
-   for(let i=0;i<5;i++)box(.005,.012,.5+((i*3)%4)*.15,mat.char,wx+.025,1.95-i*.08,wz-1.5+i*.4,g)}
-  // 7 · Mentor's Corner
-  {const g=groups.mentor,dx=X(301),dz=Z(486);table(.99,.51,dx,dz,g,.74,mat.oakDark);chair(X(301),Z(459),dx,dz,g,mat.sage);chair(X(348),Z(486),dx,dz,g);laptop(dx,.765,dz+.05,Math.PI,g);
-   for(let i=0;i<3;i++)box(.22,.035,.3,M(['#7A3B2E','#3D4F6B','#C9A867'][i]),dx-.33,.785+i*.036,dz,g)}
-  // plants + outside garden
-  [[X(372),ZMIN+.35,1],[X(388),ZMAX-.35,1.1],[XMIN+.35,Z(178),.9]].forEach(([x,z,sz])=>plant(x,z,scene,sz));
-  for(let i=0;i<26;i++){const a=i*2.399,r=10+((i*7)%9);let x=Math.cos(a)*r,z=Math.sin(a)*r*.9;if(Math.abs(x)<8&&Math.abs(z)<6.5)continue;
-    cyl(.09,.13,1.3,mat.bark,x,.65,z,scene,8);const c=mesh(new THREE.IcosahedronGeometry(.9+((i*5)%4)*.2,1),i%2?mat.leaf:mat.leaf2,x,1.9+((i*3)%3)*.2,z,scene);c.scale.y=1.2}
+  // trees
+  function pine(x,z,s,p){cyl(.12*s,.18*s,1.2*s,mat.bark,x,.6*s,z,p,7);const m1=mesh(new THREE.ConeGeometry(1.2*s,2.6*s,8),(x*7+z)%2>1?mat.pine:mat.pine2,x,2.3*s,z,p);mesh(new THREE.ConeGeometry(.9*s,2*s,8),m1.material,x,3.4*s,z,p)}
+  function leafy(x,z,s,p){cyl(.14*s,.2*s,1.6*s,mat.bark,x,.8*s,z,p,7);const c=mesh(new THREE.IcosahedronGeometry(1.25*s,1),(Math.abs(x*3+z))%2>1?mat.leaf:mat.leaf2,x,2.4*s,z,p);c.scale.y=1.1}
+
+  // 1 · Fire Circle
+  {const gr=groups.seminar,[cx,cz]=ZONES.seminar.c;
+   for(let i=0;i<12;i++){const a=i/12*Math.PI*2;mesh(new THREE.DodecahedronGeometry(.22,0),mat.stone,cx+Math.cos(a)*.75,.15,cz+Math.sin(a)*.75,gr)}
+   const fire=mesh(new THREE.ConeGeometry(.35,.9,7),new THREE.MeshStandardMaterial({color:'#FFB347',emissive:'#FF7A1A',emissiveIntensity:2.2,roughness:1}),cx,.5,cz,gr);fire.castShadow=false;
+   const fl=new THREE.PointLight('#FF9A3C',2.2,9,2);fl.position.set(cx,1.1,cz);scene.add(fl);
+   for(let i=0;i<4;i++){const l=cyl(.06,.06,.9,mat.log,cx+Math.cos(i)*.2,.15,cz+Math.sin(i)*.2,gr,6);l.rotation.z=Math.PI/2;l.rotation.y=i*.8}
+   for(let i=0;i<6;i++){const a=i/6*Math.PI*2+.3,x=cx+Math.cos(a)*2.4,z=cz+Math.sin(a)*2.4;const l=cyl(.22,.22,1.9,mat.log,x,.24,z,gr,10);l.rotation.z=Math.PI/2;l.rotation.y=-(a+Math.PI/2)}}
+  // 2 · Timber Pavilion
+  {const gr=groups.pavilion,[cx,cz]=ZONES.pavilion.c,w=6.4,d=4.4,h=2.8;
+   box(w+.2,.12,d+.2,mat.woodLight,cx,.06,cz,gr);
+   [[-1,-1],[1,-1],[-1,1],[1,1],[0,-1],[0,1]].forEach(([a,b])=>box(.22,h,.22,mat.wood,cx+a*w/2,h/2,cz+b*d/2,gr));
+   const r1=box(w+.8,.14,d/2+.9,mat.roof,cx,h+.55,cz-d/4-.2,gr);r1.rotation.x=-.42;const r2=box(w+.8,.14,d/2+.9,mat.roof,cx,h+.55,cz+d/4+.2,gr);r2.rotation.x=.42;
+   box(w+.4,.18,.18,mat.wood,cx,h+.95,cz,gr);
+   [-1.4,1.4].forEach(o=>{box(2.6,.08,.9,mat.woodLight,cx+o,.78,cz,gr);box(2.6,.06,.3,mat.wood,cx+o,.45,cz-.75,gr);box(2.6,.06,.3,mat.wood,cx+o,.45,cz+.75,gr);[-1.1,1.1].forEach(q=>box(.08,.74,.8,mat.wood,cx+o+q,.38,cz,gr))});
+   box(1.6,1,.05,mat.white,cx+2.4,1.4,cz-1.6,gr);[-.7,.7].forEach(o=>box(.05,1.8,.05,mat.frame,cx+2.4+o,.9,cz-1.6,gr))}
+  // 3 · River Field Lab
+  {const gr=groups.river,p=river.getPoint(.47),d=river.getTangent(.47);
+   const br=box(5.4,.12,1.2,mat.woodLight,p.x,.55,p.z,gr);br.rotation.y=-Math.atan2(d.z,d.x)+Math.PI/2;
+   [-1,1].forEach(s=>{const rail=box(5.4,.06,.06,mat.wood,p.x,1.1,p.z,gr);rail.rotation.y=br.rotation.y;rail.translateZ(s*.55)});
+   const tx=8.2,tz=-1.4;box(1.6,.06,.8,mat.woodLight,tx,.8,tz,gr);[[-.7,-.3],[.7,-.3],[-.7,.3],[.7,.3]].forEach(([a,b])=>box(.05,.8,.05,mat.frame,tx+a,.4,tz+b,gr));
+   ['#3E6FA8','#E3B341','#5E9C6A','#F2EDE0'].forEach((c,i)=>cyl(.06,.06,.18,M(c,{roughness:.3}),tx-.5+i*.32,.92,tz,gr,12));
+   box(.5,.35,.35,M('#C0563E'),tx+.9,.18,tz+.6,gr)}
+  // 4 · Garden & Greenhouse
+  {const gr=groups.garden,[cx,cz]=ZONES.garden.c;
+   for(let r=0;r<2;r++)for(let c=0;c<3;c++){const x=cx-2+c*2.1,z=cz-.4+r*2.2;box(1.6,.4,1.1,mat.wood,x,.2,z,gr);box(1.5,.05,1,mat.soil,x,.41,z,gr);
+     for(let k=0;k<6;k++){const pl=mesh(new THREE.IcosahedronGeometry(.17,0),(k+c)%2?mat.leaf2:mat.leaf,x-.55+(k%3)*.55,.55,z-.25+Math.floor(k/3)*.5,gr);pl.castShadow=false}}
+   const hx=cx-1,hz=cz-3.4;box(4,2.2,2.6,mat.glass,hx,1.1,hz,gr).castShadow=false;
+   const gr1=box(4.1,.06,1.6,mat.glass,hx,2.5,hz-.6,gr);gr1.rotation.x=-.55;gr1.castShadow=false;const gr2=box(4.1,.06,1.6,mat.glass,hx,2.5,hz+.6,gr);gr2.rotation.x=.55;gr2.castShadow=false;
+   [[-2,-1.3],[2,-1.3],[-2,1.3],[2,1.3],[0,-1.3],[0,1.3]].forEach(([a,b])=>box(.06,2.2,.06,mat.frame,hx+a,1.1,hz+b,gr));box(4.1,.06,.06,mat.frame,hx,2.85,hz,gr);
+   for(let k=0;k<5;k++)mesh(new THREE.IcosahedronGeometry(.25,0),mat.leaf2,hx-1.5+k*.75,.5,hz,gr)}
+  // 5 · Solitude Hammocks
+  {const gr=groups.solitude,[cx,cz]=ZONES.solitude.c;
+   [[-1.5,-2],[1.2,-.4],[-1.2,1.8]].forEach(([a,b],i)=>{const x1=cx+a-1.4,x2=cx+a+1.4,z=cz+b;pine(x1,z-.3,.9,gr);pine(x2,z+.3,.9,gr);
+     const curve=new THREE.CatmullRomCurve3([new THREE.Vector3(x1+.2,1.4,z-.25),new THREE.Vector3((x1+x2)/2,.75,z),new THREE.Vector3(x2-.2,1.4,z+.25)]);
+     const hm=new THREE.Mesh(new THREE.TubeGeometry(curve,20,.32,8,false),[mat.fabric,mat.fabric2,mat.fabric3][i]);hm.castShadow=true;gr.add(hm)})}
+  // 6 · Reflection Trail question posts
+  {const gr=groups.trail;[[-1.5,13.2],[-4.2,11.6],[-7,9.6],[-9.6,8.4]].forEach(([x,z],i)=>{box(.12,1.3,.12,mat.wood,x,.65,z+.75,gr);const s=box(.7,.4,.05,mat.white,x,1.2,z+.72,gr);s.rotation.y=i*.3});
+   leafy(-3,13.8,.9,gr);leafy(-8.6,11,.85,gr);box(1.4,.1,.4,mat.woodLight,-5.6,.45,10.1,gr);[-.55,.55].forEach(o=>box(.08,.4,.35,mat.wood,-5.6+o,.22,10.1,gr))}
+  // 7 · Basecamp Cabin
+  {const gr=groups.basecamp,[cx,cz]=ZONES.basecamp.c,w=4.6,d=3.6,h=2.4;
+   for(let i=0;i<8;i++){const y=.15+i*.3;const l1=cyl(.15,.15,w,mat.log,cx,y,cz-d/2,gr,8);l1.rotation.z=Math.PI/2;const l2=cyl(.15,.15,w,mat.log,cx,y,cz+d/2,gr,8);l2.rotation.z=Math.PI/2;const l3=cyl(.15,.15,d,mat.log,cx-w/2,y,cz,gr,8);l3.rotation.x=Math.PI/2;const l4=cyl(.15,.15,d,mat.log,cx+w/2,y,cz,gr,8);l4.rotation.x=Math.PI/2}
+   box(w-.2,h,d-.2,mat.wood,cx,h/2,cz,gr);
+   const r1=box(w+.8,.16,d/2+.8,mat.roof,cx,h+.6,cz-d/4-.15,gr);r1.rotation.x=-.55;const r2=box(w+.8,.16,d/2+.8,mat.roof,cx,h+.6,cz+d/4+.15,gr);r2.rotation.x=.55;
+   box(.9,1.7,.06,M('#3A2A1C'),cx,.85,cz-d/2-.12,gr);[-1.4,1.4].forEach(o=>box(.7,.6,.06,M('#F2D79A',{emissive:'#C9A04A',emissiveIntensity:.3}),cx+o,1.4,cz-d/2-.12,gr));
+   box(w,.12,1.4,mat.woodLight,cx,.25,cz-d/2-.8,gr);box(.9,.5,.5,mat.wood,cx+1.4,.55,cz-d/2-.9,gr);
+   cyl(.1,.1,.9,mat.stone,cx-1.6,h+1.2,cz+.6,gr,8);
+   const sx=cx+3.6,sz=cz+.5;box(1.6,1.6,2.4,mat.wood,sx,.8,sz,gr);const sr=box(1.9,.1,2.7,mat.roof,sx,1.7,sz,gr);sr.rotation.z=.15;
+   ['#C0563E','#E3B341','#3E6FA8'].forEach((c,i)=>{const k=mesh(new THREE.CapsuleGeometry(.2,2.2,4,8),M(c,{roughness:.4}),sx-1,1,sz-.8+i*.6,gr);k.rotation.z=.3})}
+
+  // forest around the campus
+  const keepClear=[...ZIDS.map(id=>[...ZONES[id].c,ZONES[id].r+.8]),...ZIDS.map(id=>[ZONES[id].c[0]+ZONES[id].view[0],ZONES[id].c[1]+ZONES[id].view[2],3])];
+  const clear=(x,z)=>keepClear.every(([a,b,r])=>Math.hypot(x-a,z-b)>r)&&Math.abs(x-river.getPoint(Math.min(1,Math.max(0,(z+26)/52))).x)>3.6;
+  let placed=0;for(let i=0;i<420&&placed<130;i++){const a=i*2.39996,r=8+Math.sqrt(i)*1.9;const x=Math.cos(a)*r*1.15,z=Math.sin(a)*r;if(Math.hypot(x,z)>34||!clear(x,z))continue;const s=.85+((i*13)%7)*.09;(i%3?pine:leafy)(x,z,s,scene);placed++}
+  // distant mountains
+  [[-40,-55,22,16],[-10,-62,26,20],[22,-58,24,17],[50,-40,20,14],[-55,-20,18,12]].forEach(([x,z,r,h])=>{const m=mesh(new THREE.ConeGeometry(r,h,6),mat.mountain,x,h/2-1,z);m.castShadow=false;m.receiveShadow=false;const cap=mesh(new THREE.ConeGeometry(r*.32,h*.32,6),mat.snow,x,h-1-h*.16+.02,z);cap.castShadow=false});
 
   // interaction
   const ray=new THREE.Raycaster(),ptr=new THREE.Vector2();let hover=null,current=null,downAt=null,fly=null;
@@ -1182,39 +1086,29 @@ function initRoom3D(){
   canvas.addEventListener('pointerdown',ev=>{downAt=[ev.clientX,ev.clientY]});
   canvas.addEventListener('pointerup',ev=>{if(!downAt)return;const moved=Math.hypot(ev.clientX-downAt[0],ev.clientY-downAt[1]);downAt=null;if(moved<6){const id=pick(ev);if(id)select(id)}});
 
-  function viewFor(id){
-    const c=ZONES[id].c,dir=new THREE.Vector3(-c.x,0,-c.z);if(dir.length()<.5)dir.set(0,0,1);dir.normalize();
-    const target=new THREE.Vector3(c.x,.75,c.z),pos=target.clone().addScaledVector(dir,3.5);pos.y=1.85;
-    return {pos,target};
-  }
-  function flyTo(v,done){
-    fly={p0:camera.position.clone(),t0:controls.target.clone(),p1:v.pos,t1:v.target,start:performance.now(),dur:1300,done};
-    controls.enabled=false;controls.autoRotate=false;tip.hidden=true;
-  }
+  function viewFor(id){const z=ZONES[id],[cx,cz]=z.c,[dx,dy,dz]=z.view;return {pos:new THREE.Vector3(cx+dx,dy,cz+dz),target:new THREE.Vector3(cx,.9,cz)}}
+  function flyTo(v,done){fly={p0:camera.position.clone(),t0:controls.target.clone(),p1:v.pos,t1:v.target,start:performance.now(),dur:1500,done};controls.enabled=false;controls.autoRotate=false;tip.hidden=true}
   function select(id){
-    current=id;markChip(id);card.hidden=true;overBtn.hidden=false;
-    controls.minDistance=.6;controls.maxDistance=7;
-    flyTo(viewFor(id),()=>{const i=ZIDS.indexOf(id);card.innerHTML=zoneInfo(id)+`<div class="r3-nav"><button type="button" data-go="${ZIDS[(i+ZIDS.length-1)%ZIDS.length]}">← ${ZONES[ZIDS[(i+ZIDS.length-1)%ZIDS.length]].name}</button><button type="button" data-go="${ZIDS[(i+1)%ZIDS.length]}">${ZONES[ZIDS[(i+1)%ZIDS.length]].name} →</button></div>`;card.hidden=false});
+    current=id;markChip(id);card.hidden=true;overBtn.hidden=false;controls.minDistance=1;controls.maxDistance=60;
+    flyTo(viewFor(id),()=>{controls.maxDistance=16;const i=ZIDS.indexOf(id),prev=ZIDS[(i+ZIDS.length-1)%ZIDS.length],next=ZIDS[(i+1)%ZIDS.length];
+      card.innerHTML=zoneInfo(id)+`<div class="r3-nav"><button type="button" data-go="${prev}">← ${ZONES[prev].name}</button><button type="button" data-go="${next}">${ZONES[next].name} →</button></div>`;card.hidden=false});
   }
-  function overview(){current=null;markChip(null);card.hidden=true;overBtn.hidden=true;controls.maxDistance=24;flyTo(HOME,()=>{controls.minDistance=4;controls.maxDistance=24})}
+  function overview(){current=null;markChip(null);card.hidden=true;overBtn.hidden=true;controls.maxDistance=60;flyTo(HOME,()=>{controls.minDistance=8})}
   card.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b)select(b.dataset.go)});
   overBtn.addEventListener('click',overview);
   wrap.addEventListener('keydown',e=>{if(e.key==='Escape'&&current)overview()});
 
-  // render loop (only while on screen)
   function resize(){const w=wrap.clientWidth,h=wrap.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.aspect=w/h;camera.fov=w<640?52:40;camera.updateProjectionMatrix()}
   new ResizeObserver(resize).observe(wrap);resize();
   let visible=true;new IntersectionObserver(es=>{visible=es[0].isIntersecting;if(visible)loop()}).observe(wrap);
-  const tmp=new THREE.Vector3();let running=false;
-  const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+  let running=false;const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
   function frame(now){
-    if(fly){const t=Math.min(1,(now-fly.start)/fly.dur),k=ease(t);camera.position.lerpVectors(fly.p0,fly.p1,k);camera.position.y+=Math.sin(k*Math.PI)*(fly.p1.y<3?1.2:0);controls.target.lerpVectors(fly.t0,fly.t1,k);
+    if(fly){const t=Math.min(1,(now-fly.start)/fly.dur),k=ease(t);camera.position.lerpVectors(fly.p0,fly.p1,k);camera.position.y+=Math.sin(k*Math.PI)*(fly.p1.y<6?3:0);controls.target.lerpVectors(fly.t0,fly.t1,k);
       if(t>=1){const d=fly.done;fly=null;controls.enabled=true;d&&d()}}
     controls.update();
-    walls.forEach(w=>{const out=tmp.copy(camera.position).sub(w.p).dot(w.n)>0;w.t+=((out?0:1)-w.t)*.2;w.g.traverse(o=>{if(o.isMesh){o.material.opacity=o.userData.op*w.t;o.visible=w.t>.03;o.castShadow=w.t>.5}})});
-    ZIDS.forEach(id=>{const tgt=id===current?.22:id===hover?.16:.07;const m=tints[id].material;m.opacity+=(tgt-m.opacity)*.15});
+    ZIDS.forEach(id=>{const tgt=id===current?.2:id===hover?.16:.08;const m=tints[id].material;m.opacity+=(tgt-m.opacity)*.15});
     lines.forEach(l=>{l.visible=l.userData.zone!==current});
-    pins.forEach(p=>{const on=p.userData.zone===current;const sc=on?0:(p.userData.zone===hover?.6:.5);p.scale.setScalar(p.scale.x+(sc-p.scale.x)*.2);p.visible=p.scale.x>.02});
+    pins.forEach(p=>{const on=p.userData.zone===current;const sc=on?0:(p.userData.zone===hover?1.3:1.1);p.scale.setScalar(p.scale.x+(sc-p.scale.x)*.2);p.visible=p.scale.x>.04});
     renderer.render(scene,camera);
   }
   function loop(){if(running)return;running=true;const step=now=>{if(!visible){running=false;return}frame(now);requestAnimationFrame(step)};requestAnimationFrame(step)}
@@ -1251,22 +1145,22 @@ const SUBJECTS={
     project:{hands:'Produce a podcast with people in your town who chose a life closer to nature.',research:'Write an original essay on what freedom means in the face of climate change.',collab:'Organize a community campaign on an environmental issue your group chooses.',dialogue:'Found an open-air philosophy circle that meets every week under the trees.'}}
 };
 const METHODS={
-  hands:{label:'Hands-on Projects',glyph:'Make',blurb:'Learn by building, testing and creating real things.',how:'Most of your learning happens at the Making Bench and in the Maker Workshop. You show mastery through prototypes, artworks and models.'},
-  research:{label:'Independent Research',glyph:'Inquire',blurb:'Follow your own questions at your own pace.',how:'You use the Solitude Nooks and Library, set your own research questions and defend your findings to a panel each term.'},
-  collab:{label:'Collaborative Learning',glyph:'Together',blurb:'Think and build alongside a team.',how:'You work in the Collaboration Pods, form your own teams and share responsibility for group outcomes.'},
-  dialogue:{label:'Socratic Dialogue',glyph:'Question',blurb:'Learn by questioning, debating and discussing.',how:'You learn in the Seminar Circle, test ideas through discussion and write position papers you defend in front of peers.'}
+  hands:{label:'Hands-on Fieldwork',glyph:'Make',blurb:'Learn by testing water, building shelters and growing food.',how:'Most of your learning happens at the River Field Lab, in the garden and on the trail. You show mastery through real things you build, grow or restore.'},
+  research:{label:'Independent Research',glyph:'Inquire',blurb:'Follow your own questions about the land at your own pace.',how:'You use the Solitude Hammocks and the Reflection Trail, set your own research questions and defend your findings to a panel each term.'},
+  collab:{label:'Team Expeditions',glyph:'Together',blurb:'Plan, travel and solve problems as a crew.',how:'You work under the Timber Pavilion and out on expeditions, form your own crews and share responsibility for what the group decides.'},
+  dialogue:{label:'Socratic Dialogue',glyph:'Question',blurb:'Learn by questioning, debating and discussing.',how:'You learn at the Fire Circle, test ideas through discussion and write position papers you defend in front of peers.'}
 };
 const ACTIVITIES={
-  debate:{label:'Debate & Dissent Society',blurb:'Argue, persuade, disagree well.'},
-  film:{label:'Indie Film Collective',blurb:'Write, shoot and screen films.'},
-  robotics:{label:'Robotics Guild',blurb:'Build and compete with robots.'},
-  founders:{label:'Founders’ Lab',blurb:'Pitch and grow student ventures.'},
-  service:{label:'Community Service Corps',blurb:'Serve and lead in the community.'},
-  outdoor:{label:'Wilderness & Solitude Expeditions',blurb:'Hike, camp and reflect in nature.'},
-  music:{label:'Open Mic & Music Collective',blurb:'Perform, compose, jam.'},
+  kayak:{label:'Whitewater Kayaking Club',blurb:'Read rivers and paddle them.'},
+  climb:{label:'Climbing Crew',blurb:'Trust your partner and the rope.'},
+  debate:{label:'Fire Circle Debate Society',blurb:'Argue, persuade, disagree well.'},
+  river:{label:'River Restoration Corps',blurb:'Clean and rebuild the stream.'},
+  stars:{label:'Star-Gazing Society',blurb:'Night skies and big questions.'},
+  birds:{label:'Birding & Tracking Society',blurb:'Learn who else lives here.'},
+  farm:{label:'Seed Library & Farm Stand',blurb:'Save seeds, sell the harvest.'},
   own:{label:'Found my own club',blurb:'Start something that doesn’t exist yet.'}
 };
-const GOAL_SUGG=['Discover what I truly care about','Start my own business','Become a more confident speaker','Create something original','Make a difference in my community','Prepare for university on my own terms'];
+const GOAL_SUGG=['Discover what I truly care about','Lead my first expedition','Restore something in nature','Become a more confident speaker','Grow food for my community','Get comfortable being alone with my thoughts'];
 
 /* ===== builder ===== */
 const STEPS=[['subject','Subject',SUBJECTS],['method','Learning style',METHODS],['activity','Beyond class',ACTIVITIES],['goal','Your goal',null]];
