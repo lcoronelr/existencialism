@@ -376,9 +376,6 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;backgroun
 
 /* ---------- create your path ---------- */
 #path{background:var(--paper)}
-.mode-switch{display:inline-flex;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:4px;margin-bottom:clamp(28px,4vw,44px)}
-.mode-switch button{border:0;background:none;padding:10px 20px;border-radius:999px;font:600 .9rem var(--sans);color:var(--muted);cursor:pointer;white-space:nowrap}
-.mode-switch button[aria-selected="true"]{background:var(--forest);color:#F6F2E8}
 .builder{display:grid;grid-template-columns:260px minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
 .summary{position:sticky;top:100px;list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
 .summary button{all:unset;box-sizing:border-box;width:100%;cursor:pointer;display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;align-items:center;padding:15px 0;border-bottom:1px solid var(--line)}
@@ -456,29 +453,6 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;backgroun
 .idcard .bars{height:4.6cqw;width:22cqw;flex:none}
 .card-actions{display:flex;gap:10px;flex-wrap:wrap}
 .card-note{font-size:.84rem;color:var(--muted)}
-
-/* class vote */
-.vote-top{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:start;margin-bottom:26px}
-.qr-box{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:14px;max-width:340px}
-.qr-box #qr{width:108px;height:108px;background:#fff;padding:6px;border-radius:4px;display:grid;place-items:center}
-.qr-box #qr img,.qr-box #qr canvas{width:96px!important;height:96px!important}
-.qr-box b{font-family:var(--display);font-size:1.2rem;display:block;line-height:1.15}
-.qr-box span{font-size:.82rem;color:var(--muted)}
-.vq{margin-bottom:28px}
-.vq-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:12px;flex-wrap:wrap}
-.vq-head h4{font-size:1.6rem}
-.vq-head small{font:500 .7rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.vopts{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
-.vopt{position:relative;background:var(--bg);border:1.5px solid var(--line);border-radius:7px;padding:14px 14px 12px;display:grid;gap:8px;overflow:hidden;min-width:0}
-.vopt.lead{border-color:var(--brass)}
-.vopt .vlabel{font-weight:600;font-size:.94rem;line-height:1.25;position:relative}
-.vopt .vrow{display:flex;align-items:center;gap:8px;position:relative}
-.vopt .vcount{font-family:var(--display);font-size:2.2rem;font-weight:600;line-height:1;margin-right:auto;font-variant-numeric:tabular-nums}
-.vopt .vfill{position:absolute;left:0;bottom:0;height:5px;background:var(--brass);transition:width .4s cubic-bezier(.2,.7,.2,1)}
-.vbtn{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:var(--paper);color:var(--ink);font:600 1.2rem/1 var(--sans);cursor:pointer}
-.vbtn.plus{background:var(--forest);color:#F4EFE2;border-color:var(--forest);width:48px;height:48px;font-size:1.5rem}
-.vbtn:hover{border-color:var(--brass)}
-@media (max-width:760px){.vote-top{grid-template-columns:1fr}}
 
 /* ---------- footer ---------- */
 footer{background:var(--band);color:var(--on-band-muted);padding-block:64px 40px;font-size:.92rem}
@@ -958,12 +932,7 @@ footer a:hover{color:var(--on-band)}
       <p class="lede">Make four choices and the Academy will build your personal learning path and student card. Change your mind at any time. Choosing again is part of the philosophy.</p>
     </div>
 
-    <div class="mode-switch" role="tablist" aria-label="Activity mode">
-      <button role="tab" id="tabSolo" aria-selected="true" aria-controls="paneSolo">Build your path</button>
-      <button role="tab" id="tabVote" aria-selected="false" aria-controls="paneVote">Class vote</button>
-    </div>
-
-    <div id="paneSolo" role="tabpanel" aria-labelledby="tabSolo">
+    <div id="paneSolo">
       <div class="builder" id="builder">
         <ol class="summary" id="summary" aria-label="Your choices"></ol>
         <div>
@@ -977,23 +946,6 @@ footer a:hover{color:var(--on-band)}
       <div id="result" hidden></div>
     </div>
 
-    <div id="paneVote" role="tabpanel" aria-labelledby="tabVote" hidden>
-      <div class="vote-top">
-        <div style="display:grid;gap:8px">
-          <h3 style="font-size:clamp(1.7rem,3vw,2.3rem)">Let the class choose a path together.</h3>
-          <p class="muted" style="max-width:60ch">Read each option aloud, count the raised hands and tap <b>+</b> to record them. The leading choices form the class's own learning path.</p>
-        </div>
-        <div class="qr-box" id="qrBox" hidden>
-          <div id="qr" aria-label="QR code to open this site"></div>
-          <div><b>Build your own on your phone</b><span>Scan to open The Freedom Academy and create your personal path card.</span></div>
-        </div>
-      </div>
-      <div id="voteBody"></div>
-      <div class="step-nav">
-        <button class="link-btn" id="voteReset" type="button">Reset votes</button>
-        <button class="btn btn-brass" id="voteReveal" type="button">Reveal our class path →</button>
-      </div>
-    </div>
   </div>
 </section>
 </main>
@@ -1015,7 +967,6 @@ footer a:hover{color:var(--on-band)}
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="vendor/three.min.js"></script>
 <script src="vendor/OrbitControls.js"></script>
 <script src="vendor/RoomEnvironment.js"></script>
@@ -1026,7 +977,6 @@ document.documentElement.classList.add('js');
 
 /* ===== Settings you can edit ===== */
 const GROUP = ['Luis Coronel','Matthew Franklin'];   // group member names (footer); add the third name here
-const SITE_URL = 'https://claude.ai/artifact/PsruGgHhuNKsMaPMxqijbJ';                                              // public link encoded in the class-vote QR code
 
 const $ = (s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
 const esc = s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -1322,7 +1272,7 @@ const GOAL_SUGG=['Discover what I truly care about','Start my own business','Bec
 /* ===== builder ===== */
 const STEPS=[['subject','Subject',SUBJECTS],['method','Learning style',METHODS],['activity','Beyond class',ACTIVITIES],['goal','Your goal',null]];
 let state=store.get('path',{subject:null,method:null,activity:null,name:'',goal:''});
-let step=0, isClass=false;
+let step=0;
 const summary=$('#summary'), body=$('#stepBody'), back=$('#backBtn'), next=$('#nextBtn');
 const canReach=i=>STEPS.slice(0,i).every(([k,,o])=>!o||state[k]);
 
@@ -1368,7 +1318,7 @@ body.addEventListener('click',e=>{
 body.addEventListener('input',e=>{if(e.target.id==='fName')state.name=e.target.value;if(e.target.id==='fGoal')state.goal=e.target.value;store.set('path',state);renderSummary()});
 summary.addEventListener('click',e=>{const b=e.target.closest('button[data-step]');if(b&&!b.disabled){step=+b.dataset.step;renderStep()}});
 back.addEventListener('click',()=>{if(step>0){step--;renderStep()}});
-next.addEventListener('click',()=>{if(step<3){step++;renderStep()}else{isClass=false;showResult()}});
+next.addEventListener('click',()=>{if(step<3){step++;renderStep()}else showResult()});
 
 /* ===== result ===== */
 function studentId(){
@@ -1376,7 +1326,7 @@ function studentId(){
   return 'FA-2026-'+String(h%10000).padStart(4,'0');
 }
 function initials(n){const p=n.trim().split(/\s+/).filter(Boolean);if(!p.length)return 'FA';return (p[0][0]+(p.length>1?p[p.length-1][0]:'')).toUpperCase()}
-function displayName(){return state.name.trim()||(isClass?'Our Class':'Future Student')}
+function displayName(){return state.name.trim()||'Future Student'}
 function barsSVG(id){
   let x=0,out='';const digits=id.replace(/\D/g,'');
   for(let i=0;i<34;i++){const d=+digits[i%digits.length]||1;const w=(d%3)+1;if(i%2===0)out+=`<rect x="${x}" y="0" width="${w}" height="30" fill="#15241D"/>`;x+=w+1}
@@ -1385,11 +1335,11 @@ function barsSVG(id){
 function resetBuilder(){$('#result').hidden=true;$('#builder').hidden=false;step=0;renderStep()}
 function showResult(){
   const S=SUBJECTS[state.subject],M=METHODS[state.method],A=ACTIVITIES[state.activity];
-  const name=displayName(), id=studentId(), goal=state.goal.trim()||(isClass?'Discover what we truly care about, together':'Discover what I truly care about');
+  const name=displayName(), id=studentId(), goal=state.goal.trim()||'Discover what I truly care about';
   const r=$('#result');
   r.innerHTML=`
     <div class="result-head">
-      <div style="display:grid;gap:8px"><span class="r-k">${isClass?'Chosen by the class':'Your learning path'}</span><h3>${esc(name)}’s Learning Path</h3></div>
+      <div style="display:grid;gap:8px"><span class="r-k">Your learning path</span><h3>${esc(name)}’s Learning Path</h3></div>
       <div class="result-actions"><button class="link-btn" type="button" id="editBtn">Change a choice</button><button class="link-btn" type="button" id="restartBtn">Start over</button></div>
     </div>
     <div class="result-grid">
@@ -1411,7 +1361,7 @@ function showResult(){
     </div>`;
   $('#builder').hidden=true; r.hidden=false;
   $('#editBtn').onclick=resetBuilder;
-  $('#restartBtn').onclick=()=>{state={subject:null,method:null,activity:null,name:'',goal:''};store.set('path',state);isClass=false;resetBuilder()};
+  $('#restartBtn').onclick=()=>{state={subject:null,method:null,activity:null,name:'',goal:''};store.set('path',state);resetBuilder()};
   $('#dlBtn').onclick=()=>downloadCard(name,id,S,M,A);
   $('#path').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
 }
@@ -1480,38 +1430,6 @@ async function downloadCard(name,id,S,M,A){
   btn.disabled=false;
 }
 
-/* ===== class vote ===== */
-const VQ=[['subject','Which subject should our class explore?',SUBJECTS],['method','How should we learn it?',METHODS],['activity','What should we do beyond class?',ACTIVITIES]];
-let votes=store.get('votes',{subject:{},method:{},activity:{}});
-const voteBody=$('#voteBody');
-function leader(k,opts){let best=null,b=-1;for(const id of Object.keys(opts)){const v=votes[k][id]||0;if(v>b){b=v;best=id}}return b>0?best:null}
-function renderVotes(){
-  voteBody.innerHTML=VQ.map(([k,q,opts],qi)=>{
-    const total=Object.values(votes[k]).reduce((a,b)=>a+b,0),max=Math.max(1,...Object.values(votes[k]),0),lead=leader(k,opts);
-    return `<div class="vq"><div class="vq-head"><h4>${qi+1}. ${q}</h4><small>${total} vote${total===1?'':'s'}</small></div><div class="vopts">${Object.entries(opts).map(([id,o])=>{const v=votes[k][id]||0;return `<div class="vopt ${lead===id?'lead':''}"><span class="vlabel">${esc(o.short||o.label)}</span><div class="vrow"><span class="vcount">${v}</span><button class="vbtn" type="button" data-k="${k}" data-id="${id}" data-d="-1" aria-label="Remove a vote for ${esc(o.label)}">−</button><button class="vbtn plus" type="button" data-k="${k}" data-id="${id}" data-d="1" aria-label="Add a vote for ${esc(o.label)}">+</button></div><span class="vfill" style="width:${v/max*100}%"></span></div>`}).join('')}</div></div>`;
-  }).join('');
-  $('#voteReveal').disabled=!VQ.every(([k,,o])=>leader(k,o));
-}
-voteBody.addEventListener('click',e=>{const b=e.target.closest('.vbtn');if(!b)return;const {k,id,d}=b.dataset;votes[k][id]=Math.max(0,(votes[k][id]||0)+ +d);store.set('votes',votes);renderVotes()});
-$('#voteReset').addEventListener('click',()=>{votes={subject:{},method:{},activity:{}};store.set('votes',votes);renderVotes()});
-$('#voteReveal').addEventListener('click',()=>{
-  state={subject:leader('subject',SUBJECTS),method:leader('method',METHODS),activity:leader('activity',ACTIVITIES),name:'',goal:'Discover what we truly care about, together'};
-  isClass=true;selectTab('solo');showResult();
-});
-renderVotes();
-
-/* tabs */
-function selectTab(t){
-  $('#tabSolo').setAttribute('aria-selected',t==='solo');$('#tabVote').setAttribute('aria-selected',t==='vote');
-  $('#paneSolo').hidden=t!=='solo';$('#paneVote').hidden=t!=='vote';
-}
-$('#tabSolo').addEventListener('click',()=>selectTab('solo'));
-$('#tabVote').addEventListener('click',()=>selectTab('vote'));
-
-/* QR code */
-const SELF_HOSTED = /^https?:$/.test(location.protocol) && !/claude/.test(location.hostname);
-const QR_URL = SELF_HOSTED ? location.origin + location.pathname : SITE_URL;   // when self-hosted, the QR points at this server
-if(QR_URL && window.QRCode){try{new QRCode($('#qr'),{text:QR_URL,width:192,height:192,colorDark:'#15241D',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});$('#qrBox').hidden=false}catch(e){}}
 
 renderStep();
 
