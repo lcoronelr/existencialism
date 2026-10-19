@@ -148,7 +148,24 @@ header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;backgroun
 @media (max-width:520px){.mosaic{grid-template-columns:1fr}.t1,.t2,.t3,.t4,.t5,.t6{grid-column:span 1}}
 /* then vs now: full-width before/after slider, each side's list sits on its own photo */
 .compare{margin-top:clamp(56px,7vw,90px)}
-.compare-head{display:grid;gap:12px;margin-bottom:30px;max-width:760px}
+.compare-head{display:grid;gap:14px;justify-items:center;text-align:center;margin:0 auto 34px;max-width:820px}
+.compare-head h3{font-size:clamp(2.3rem,4.6vw,3.7rem);line-height:1.05}
+.compare-head h3 em{color:var(--brass);font-weight:500}
+.compare-hint{font:500 .72rem var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;gap:8px;align-items:center}
+.compare-hint span{color:var(--brass);font-size:1rem}
+.eyebrow-c{justify-content:center}
+.eyebrow-c::after{content:"";width:28px;height:1px;background:currentColor}
+/* philosophy photo band */
+.phil-band{position:relative;overflow:hidden;color:#F2EDE0;padding-block:clamp(90px,13vw,170px);background:#0A120E}
+.phil-band .phil-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.55}
+.phil-band::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(10,18,14,.55) 0%,rgba(10,18,14,.88) 75%)}
+.phil-band .wrap{position:relative;z-index:1}
+.phil-inner{display:grid;justify-items:center;text-align:center;gap:22px;max-width:860px;margin-inline:auto}
+.phil-inner .eyebrow{color:#D3B678}
+.phil-inner h2{font-size:clamp(2.8rem,6.4vw,5.2rem);line-height:1;color:#F2EDE0}
+.phil-inner h2 em{color:#E2C98F;font-weight:500}
+.phil-rule{width:64px;height:2px;background:#CDAA68}
+.phil-text{font-size:clamp(1.08rem,1.6vw,1.3rem);line-height:1.6;color:#D6DCD2;max-width:58ch}
 .vs{--pos:50;position:relative;aspect-ratio:16/9;min-height:560px;border-radius:12px;overflow:hidden;background:#0A120E;user-select:none;-webkit-user-select:none;touch-action:pan-y}
 .vs-layer{position:absolute;inset:0;display:flex;align-items:center;padding:clamp(20px,3vw,40px)}
 .vs-now{z-index:1;isolation:isolate}
@@ -509,14 +526,14 @@ footer a:hover{color:var(--on-band)}
 </section>
 
 <!-- ================= PHILOSOPHY ================= -->
-<section class="section band" id="philosophy" data-presenter="1" data-title="Our Philosophy">
+<section class="phil-band" id="philosophy" data-presenter="1" data-title="Our Philosophy">
+  <img class="phil-bg" src="images/tent-view.jpg" alt="" loading="lazy">
   <div class="wrap">
-    <div class="phil-intro" style="grid-template-columns:1fr;margin-bottom:0">
-      <div class="reveal" style="display:grid;gap:22px">
-        <p class="eyebrow">Section 3 · Our Philosophy</p>
-        <h2>Students decide who they become.</h2>
-        <p class="lede">Existentialism is the idea that you are not born with a purpose. You become who you really are through your own choices, and you are responsible for them.</p>
-      </div>
+    <div class="phil-inner reveal">
+      <p class="eyebrow eyebrow-c">Section 3 · Our Philosophy</p>
+      <h2>Students decide<br><em>who they become.</em></h2>
+      <span class="phil-rule" aria-hidden="true"></span>
+      <p class="phil-text">Existentialism is the idea that you are not born with a purpose. You become who you really are through your own choices, and you are responsible for them.</p>
     </div>
   </div>
 </section>
@@ -539,8 +556,9 @@ footer a:hover{color:var(--on-band)}
     </div>
     <div class="compare">
       <div class="compare-head reveal">
-        <p class="eyebrow">Then vs. Now</p>
-        <h3 style="font-size:clamp(2rem,3.6vw,2.8rem)">What changes when the classroom has no walls?</h3>
+        <p class="eyebrow eyebrow-c">Then vs. Now</p>
+        <h3>What changes when the classroom has <em>no walls?</em></h3>
+        <p class="compare-hint">Drag the handle to compare <span aria-hidden="true">⇆</span></p>
       </div>
       <div class="vs reveal" id="vs">
         <div class="vs-layer vs-now">
