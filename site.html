@@ -841,7 +841,7 @@ const ZIDS=Object.keys(ZONES);
 const zoneList=$('#zoneList');
 zoneList.innerHTML=ZIDS.map(id=>{const z=ZONES[id];return `<button class="zone-chip" type="button" data-zone="${id}" aria-pressed="false"><i>${z.n}</i>${z.name}</button>`}).join('');
 function markChip(id){$$('.zone-chip').forEach(c=>c.setAttribute('aria-pressed',c.dataset.zone===id))}
-function zoneInfo(id){const z=ZONES[id];return `<span class="k">${z.k}</span><h4>${z.n}. ${z.name}</h4><p>${z.text}</p><p class="why"><b>Why it's existentialist</b>${z.why}</p>`}
+function zoneInfo(id){const z=ZONES[id];return `<span class="k">${z.k}</span><h4>${z.n}. ${z.name}</h4><p>${z.text}</p><p class="why">${z.why}</p>`}
 
 let room3d=null;
 try{room3d=initRoom3D()}catch(e){console.warn('3D classroom unavailable',e);room3d=null}
