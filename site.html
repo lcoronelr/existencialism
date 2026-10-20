@@ -1136,7 +1136,7 @@ function showResult(){
       </div>
       <div>
         <dl class="r-list">
-          <div><dt>Subject</dt><dd><b>${esc(S.label)}</b><small>Your teacher: ${esc(S.mentor[0])}, ${esc(S.mentor[1].toLowerCase())}</small></dd></div>
+          <div><dt>Subject</dt><dd><b>${esc(S.label)}</b></dd></div>
           <div><dt>Your classes</dt><dd>${S.electives.map(x=>esc(x[1])).join(' · ')}</dd></div>
           <div><dt>How you learn</dt><dd><b>${esc(M.label)}</b><small>${esc(M.how)}</small></dd></div>
           <div><dt>Passion Project</dt><dd>${esc(S.project[state.method])}</dd></div>
@@ -1156,7 +1156,7 @@ function cardHTML(name,id,S,M,A){
     <div class="main">
       <div><div class="school">The Freedom Academy</div><div class="kind">Student Path Card · 2026–27</div></div>
       <div class="nm">${esc(name)}</div>
-      <dl><dt>Subject</dt><dd>${esc(S.label)}</dd><dt>Learns by</dt><dd>${esc(M.label)}</dd><dt>Club</dt><dd>${esc(A.label)}</dd><dt>Mentor</dt><dd>${esc(S.mentor[0])}</dd></dl>
+      <dl><dt>Subject</dt><dd>${esc(S.label)}</dd><dt>Learns by</dt><dd>${esc(M.label)}</dd><dt>Club</dt><dd>${esc(A.label)}</dd></dl>
       <div class="foot"><i>Your Education. Your Choices. Your Future.</i>${barsSVG(id)}</div>
     </div></div>`;
 }
@@ -1190,7 +1190,7 @@ async function drawCard(name,id,S,M,A){
   x.fillStyle='#7E612A';x.font=`500 25px ${MO}`;x.fillText('STUDENT PATH CARD  ·  2026–27',L,198);
   x.fillStyle='#15241D';x.font=`600 96px ${D}`;let y=wrapText(x,name,L,320,mw,92,2);
   y=Math.max(y+10,410);
-  const rows=[['SUBJECT',S.label],['LEARNS BY',M.label],['CLUB',A.label],['MENTOR',S.mentor[0]]];
+  const rows=[['SUBJECT',S.label],['LEARNS BY',M.label],['CLUB',A.label]];
   for(const [k,v] of rows){x.fillStyle='#7E612A';x.font=`500 24px ${MO}`;x.fillText(k,L,y);x.fillStyle='#15241D';x.font=`600 36px ${SN}`;wrapText(x,v,L+210,y+2,mw-210,40,1);y+=66}
   x.strokeStyle='#DCD5C4';x.lineWidth=2;x.beginPath();x.moveTo(L,H-130);x.lineTo(R,H-130);x.stroke();
   x.fillStyle='#56655C';x.font=`italic 500 40px ${D}`;x.fillText('Your Education. Your Choices. Your Future.',L,H-70);
